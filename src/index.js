@@ -7,11 +7,11 @@ import { Provider } from 'react-redux';
 
 ReactDOM.render(
   <BrowserRouter>
-  <Provider>
+   
   <React.StrictMode>
     <App />
   </React.StrictMode>
-  </Provider>
+   
   </BrowserRouter>
   ,
   document.getElementById('root')

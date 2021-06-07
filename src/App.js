@@ -1,11 +1,12 @@
-import React from "react";
 import './App.css';
+import { FirstHeaderDiv } from './Components/FirstHeaderDiv';
+import { Navbar } from './Components/Navbar';
 
 function App() {
-
   return (
     <div className="App">
-    <h1>Flipkart</h1>
+    <Navbar/>
+    <FirstHeaderDiv />
     </div>
   );
 }
