@@ -4,8 +4,8 @@ import './App.css';
 function App() {
 
   return (
-    <div className="App">
-    <h1>Flipkart</h1>
+    <div>
+    <h1>App</h1>
     </div>
   );
 }
