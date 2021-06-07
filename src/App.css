@@ -1,10 +1,4 @@
 body {
   margin: 0;
-  height: 100vh;
-  background-color: #525757;
-}
-.App {
-  margin: 0;
   box-sizing: border-box;
-  text-align: center;
 }
