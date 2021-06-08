@@ -1,11 +1,12 @@
-import React from "react";
 import './App.css';
+import { FirstHeaderDiv } from './Components/FirstHeaderDiv';
+import { Navbar } from './Components/Navbar';
 
 function App() {
-
   return (
-    <div>
-    <h1>App</h1>
+    <div className="App">
+    <Navbar/>
+    <FirstHeaderDiv />
     </div>
   );
 }
