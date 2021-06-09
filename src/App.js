@@ -1,4 +1,5 @@
 import './App.css';
+import { AboveFooter } from './Components/AboveFooter';
 import { CarouselBox } from './Components/Carousel';
 import { FirstHeaderDiv } from './Components/FirstHeaderDiv';
 import FooterPage from './Components/Footer';
@@ -12,6 +13,7 @@ function App() {
     <FirstHeaderDiv />
     <CarouselBox/>
     <ThirdHeader />
+    <AboveFooter/>
     <FooterPage/>
     </div>
   );
