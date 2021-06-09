@@ -31,9 +31,8 @@ function CarouselBox() {
 // }
 
         return (
-            <Carousel  showThumbs={false}  infiniteLoop={true}  useKeyboardArrows={true} autoPlay={true} >
+            <Carousel showThumbs={false}  infiniteLoop={true}  useKeyboardArrows={true} autoPlay={true} >
                  
-
                  
                 <div     className="mySlides">
                 <img    style={{width:"1366px", height:"267px"}} src="https://rukminim1.flixcart.com/flap/844/140/image/7795510bfaf2adcf.jpg" alt="HMAK1X4NM5ZI"/>
