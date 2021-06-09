@@ -11,12 +11,8 @@ function App() {
     <Navbar/>
     <FirstHeaderDiv />
     <CarouselBox/>
-<<<<<<< HEAD
     <ThirdHeader />
-    
-=======
     <FooterPage/>
->>>>>>> 68e105916abd8c64570267fa135ea86a6ad04b30
     </div>
   );
 }
