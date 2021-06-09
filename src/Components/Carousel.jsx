@@ -7,6 +7,10 @@ function CarouselBox() {
  
 
         return (
+            // <Carousel showThumbs={false}  infiniteLoop={true}  useKeyboardArrows={true} autoPlay={true} >
+                 
+                 
+            <div     className="mySlides">
             <div style={{marginTop:"130px"}}> 
             <Carousel   showThumbs={false}  infiniteLoop={false}  useKeyboardArrows={true} autoPlay={true} >
                 <div>
@@ -22,6 +26,7 @@ function CarouselBox() {
                 <img width="100%" src="https://i.imgur.com/bOo2LdK.png?1" alt="Fireboltt"/>
                 </div>  
             </Carousel>
+            </div>
             </div>
         );
     }
