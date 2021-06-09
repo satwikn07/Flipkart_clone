@@ -1,7 +1,7 @@
 import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import '@fortawesome/fontawesome-free/css/fontawesome.css'
-import "bootstrap-css-only/css/bootstrap.min.css";
+//import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import styled from 'styled-components'
 const FooterPage = () => {
