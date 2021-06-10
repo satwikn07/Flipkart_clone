@@ -8,7 +8,6 @@
   ],
   "main": "src/index.js",
   "dependencies": {
-    "@brainhubeu/react-carousel": "^2.0.4",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "axios": "0.21.1",
     "bootstrap": "^5.0.1",
@@ -16,6 +15,7 @@
     "react": "17.0.2",
     "react-bootstrap": "^1.6.1",
     "react-dom": "17.0.2",
+    "react-fa": "^5.0.0",
     "react-multi-carousel": "^2.6.3",
     "react-redux": "^7.2.4",
     "react-responsive-carousel": "^3.2.18",
