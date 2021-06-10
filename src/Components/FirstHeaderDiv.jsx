@@ -1,11 +1,8 @@
 import React from "react";
 import data from "./headersPic.json";
 import styles from "../CSS/FirstHeaderDiv.module.css";
-import { electronics, fashionData1, mtopWears } from "./sub-json";
+import { mtopWears } from "./sub-json";
 import {Link} from "react-router-dom";
-//console.log(data);
-console.log(fashionData1);
-console.log(electronics);
 
 function FirstHeaderDiv(){
 

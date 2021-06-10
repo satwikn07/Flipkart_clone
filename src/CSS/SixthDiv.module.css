@@ -1,4 +1,11 @@
-.timerDiv {
+.main {
+  background-color: white;
+  width: 1328px;
+  margin-left: 10px;
+  max-height: 366px;
+}
+
+.head {
   height: 32px;
   margin: auto;
   margin-top: 10px;
@@ -9,15 +16,9 @@
   border-bottom: 1px solid rgb(202, 200, 200);
 }
 
-.timerSpan {
-  margin-left: 50px;
-  margin-top: 5px;
-}
-
 .card {
-  margin: 0 auto 0 auto;
+  margin: 30px auto 0 auto;
   padding: 15px 25px;
-  width: 235px;
   cursor: pointer;
 }
 .card > div > img {
@@ -35,9 +36,5 @@
   border: none;
   outline: none;
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
-  cursor: pointer;
-}
-
-.lastDiv:hover {
   cursor: pointer;
 }

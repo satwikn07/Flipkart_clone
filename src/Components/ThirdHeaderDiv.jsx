@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Carousel, { Dots } from '@brainhubeu/react-carousel';
-import {slidesToShowPlugin} from "@brainhubeu/react-carousel";
-import '@brainhubeu/react-carousel/lib/style.css';
 import styles from "../CSS/ThirdDiv.module.css";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import {thirdHeaderData} from "./sub-json";
 
 function ThirdHeader(){
     let [hr,setHr] = useState(23);
@@ -31,85 +31,66 @@ function ThirdHeader(){
         }
     },[])
 
+const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 6,
+      slidesToSlide: 1 // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 2 // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1 // optional, default to 1.
+    }
+}
+
     return <div style={{backgroundColor:"white"}}>
 
     <div style={{display:"flex"}}>
     <div style={{width:"1100px"}}>
     <div className={styles.timerDiv}>
     <span style={{display:"flex"}}>
-    <h4 style={{marginLeft:"50px"}}>Deals of the day</h4> :<span className={styles.timerSpan}>{hr}:{min}:{sec} left</span></span>
+    <h4 style={{marginLeft:"50px",fontWeight:"500px"}}>Deals of the day</h4> :<span className={styles.timerSpan}><span style={{marginRight:"10px"}}><img width="28px" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/timer_a73398.svg" /></span>{hr}:{min}:{sec} left</span></span>
     <button className={styles.button}>VIEW ALL</button>
     </div>
         <div style={{padding:"10px"}}>
+
         <Carousel
-            plugins={[
-                'arrows',
-                {
-                resolve: slidesToShowPlugin,
-                options: {
-                numberOfSlides: 5
-                }
-                },
-            ]}
-        >
-            <div className={styles.card}>
-            <div style={{height:"150px"}}><img width="100%" height="80%" src="https://rukminim1.flixcart.com/image/150/150/jmjhifk0/sanitary-pad-pantyliner/s/z/6/ultra-clean-plus-xl-44-sanitary-pad-whisper-original-imaf9ezuqgkpayhc.jpeg?q=70" alt="pic" /></div>
-            <div style={{textAlign:"center"}}>
-            <strong>Healthcare</strong>
-            <p>Extra 5% off</p>
-            <p>masks, body pain,relief </p>
-            </div>
-            </div>
+  swipeable={false}
+  draggable={false}
+//   showDots={true}
+  responsive={responsive}
+  infinite={false}
+//   autoPlay={true}
+  autoPlaySpeed={1000}
+//   keyBoardControl={true}
+  customTransition="all .1"
+  transitionDuration={500}
+  containerClass="carousel-container"
+  itemClass="carousel-item-padding-40-px"
+>
 
-            <div className={styles.card} >
-           <div style={{height:"150px"}}><img width="100%" height="80%" src="https://rukminim1.flixcart.com/image/150/150/kevpwnk0/vehicle-pull-along/k/5/b/35300-2319a-adventure-force-original-imafvgmmuzhjvaej.jpeg?q=70" alt="pic" /></div>
+{thirdHeaderData.map(el=>{
+    return <div className={styles.card} >
+           <div style={{height:"150px"}}><img width="100%" height="80%" src={el.src} alt="pic" /></div>
             <div style={{textAlign:"center"}}>
-            <strong>Healthcare</strong>
-            <p>Extra 5% off</p>
-            <p>masks, body pain,relief </p>
+            <strong>{el.heading}</strong>
+            <p style={{color:"green"}}>{el.discount}</p>
+            <p style={{lineHeight:"1.1"}}>{el.desc}</p>
             </div>
             </div>
+})}
 
-            <div className={styles.card} >
-           <div style={{height:"150px"}}><img width="100%" height="80%" src="https://rukminim1.flixcart.com/image/150/150/k65d18w0pkrrdj/shoe/h/m/f/6-xxzbnnwkov-kraasa-original-imafnbtjwgzbgwzn.jpeg?q=70" alt="pic" /></div>
-            <div style={{textAlign:"center"}}>
-            <strong>Healthcare</strong>
-            <p>Extra 5% off</p>
-            <p>masks, body pain,relief </p>
-            </div>
-            </div>
+</Carousel>
 
-            <div className={styles.card} >
-            <div style={{height:"150px"}}><img width="100%" height="80%" src="https://rukminim1.flixcart.com/image/150/150/kikluvk0-0/diaper/v/i/k/m-wonder-pullups-pant-style-premium-diaper-with-wetness-original-imafybngsw38qjrh.jpeg?q=70" alt="pic" /></div>
-            <div style={{textAlign:"center"}}>
-            <strong>Healthcare</strong>
-            <p>Extra 5% off</p>
-            <p>masks, body pain,relief </p>
-            </div>
-            </div>
-
-            <div className={styles.card} >
-            <div style={{height:"150px"}}><img width="100%" height="80%" src="https://rukminim1.flixcart.com/image/150/150/jsw3yq80/container/b/3/c/magna-12-pcs-container-set-blue-cello-original-imafed34nwvrmshy.jpeg?q=70" alt="pic" /></div>
-            <div style={{textAlign:"center"}}>
-            <strong>Healthcare</strong>
-            <p>Extra 5% off</p>
-            <p>masks, body pain,relief </p>
-            </div>
-            </div>
-
-            <div className={styles.card} >
-            <div style={{height:"150px"}}><img width="100%" height="80%" src="https://rukminim1.flixcart.com/image/150/150/kehfi4w0/sticker/y/h/r/wallpaper-happy-winter-trees-and-frames-home-diy-self-adhesive-original-imafv5n5qfzwyt8k.jpeg?q=70" alt="pic" /></div>
-            <div style={{textAlign:"center"}}>
-            <strong>Healthcare</strong>
-            <p>Extra 5% off</p>
-            <p>masks, body pain,relief </p>
-            </div>
-            </div>
-
-        </Carousel>
         </div>
     </div>    
-        <div style={{width:"250px",padding:"10px"}}>
+        <div className={styles.lastDiv} style={{width:"250px",padding:"10px"}}>
             <img width="100%" height="100%" src="https://rukminim1.flixcart.com/flap/464/708/image/633789f7def60050.jpg?q=70" alt="pic" />
         </div>
     </div>
