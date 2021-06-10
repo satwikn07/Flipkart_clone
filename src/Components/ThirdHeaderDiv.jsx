@@ -55,7 +55,7 @@ const responsive = {
     <div style={{width:"1100px"}}>
     <div className={styles.timerDiv}>
     <span style={{display:"flex"}}>
-    <h4 style={{marginLeft:"50px",fontWeight:"500px"}}>Deals of the day</h4> :<span className={styles.timerSpan}><span style={{marginRight:"10px"}}><img width="28px" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/timer_a73398.svg" /></span>{hr}:{min}:{sec} left</span></span>
+    <h4 style={{marginLeft:"50px",fontWeight:"500"}}>Deals of the day</h4> :<span className={styles.timerSpan}><span style={{marginRight:"10px"}}><img width="28px" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/timer_a73398.svg" /></span>{hr}:{min}:{sec} left</span></span>
     <button className={styles.button}>VIEW ALL</button>
     </div>
         <div style={{padding:"10px"}}>

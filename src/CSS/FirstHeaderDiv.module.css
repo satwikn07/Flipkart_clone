@@ -4,7 +4,7 @@
   margin-top: 0;
   margin-right: -30px;
   justify-content: center;
-  position: fixed;
+  position: relative;
   background-color: white;
 }
 
@@ -37,7 +37,7 @@
 }
 /* dropdown css for links on header div */
 .dropdown {
-  position: relative;
+  /* position: relative; */
   display: inline-block;
   text-align: left;
 }
