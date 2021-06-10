@@ -28,7 +28,7 @@ const responsive = {
 
     <div className={styles.head}>
     <div>
-    <h2 style={{fontSize:"22px",lineHeight:"1.2",fontWeight:"500px"}}>Top Fashion Styles</h2>
+    <h2 style={{fontSize:"22px",lineHeight:"1.2",fontWeight:"500"}}>Top Fashion Styles</h2>
     </div>
     <button className={styles.button}>VIEW ALL</button>
     </div>

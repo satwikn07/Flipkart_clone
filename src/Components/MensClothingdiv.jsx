@@ -15,7 +15,7 @@ const responsive = {
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 2,
-      slidesToSlide: 2 // optional, default to 1.
+      slidesToSlide: 1 // optional, default to 1.
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -28,7 +28,7 @@ const responsive = {
 
     <div className={styles.head}>
     <div>
-    <h2 style={{fontSize:"22px",lineHeight:"1.2",fontWeight:"500px"}}>Top Men's Wear</h2>
+    <h2 style={{fontSize:"22px",lineHeight:"1.2",fontWeight:"500"}}>Top Men's Wear</h2>
     </div>
     <button className={styles.button}>VIEW ALL</button>
     </div>
