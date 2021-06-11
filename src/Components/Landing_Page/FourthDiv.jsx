@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "../CSS/FourthDiv.module.css";
+import styles from "../../CSS/Landing_page_css/FourthDiv.module.css";
 
 const FourthDiv = () => {
     return (

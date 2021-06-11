@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import styles from "../CSS/SixthDiv.module.css";
+import styles from "../../CSS/Landing_page_css/SixthDiv.module.css";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import {electronics} from "./sub-json";
+import {furniture} from "./sub-json";
 
-function SixthDiv(){
+function Furniture(){
 
 const responsive = {
     desktop: {
@@ -28,8 +28,8 @@ const responsive = {
 
     <div className={styles.head}>
     <div>
-    <h2 style={{marginTop:"15px",fontSize:"22px",lineHeight:"1.2",fontWeight:"500"}}>Top Deals on Electronics 
-    <p><small style={{fontSize:"14px"}}>Devices and Accessories</small></p></h2>
+    <h2 style={{marginTop:"15px",fontSize:"22px",lineHeight:"1.2",fontWeight:"500px"}}>Furniture Bestsellers 
+    <p><small style={{fontSize:"14px"}}>upto 70% off</small></p></h2>
     </div>
     <button className={styles.button}>VIEW ALL</button>
     </div>
@@ -50,7 +50,7 @@ const responsive = {
   itemClass="carousel-item-padding-40-px"
 >
 
-{electronics.map(el=>{
+{furniture.map(el=>{
     return <div className={styles.card} >
            <div style={{height:"150px"}}><img width="100%" height="90%" src={el.src} alt="pic" /></div>
             <div style={{textAlign:"center"}}>
@@ -67,4 +67,4 @@ const responsive = {
     </div>    
     
 }
-export {SixthDiv};
+export {Furniture};

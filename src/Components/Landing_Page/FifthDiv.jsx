@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "../CSS/FifthDiv.module.css";
+import styles from "../../CSS/Landing_page_css/FifthDiv.module.css";
 
 const FifthDiv = () => {
     return (
