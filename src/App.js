@@ -1,12 +1,10 @@
 import './App.css';
-import { FirstHeaderDiv } from './Components/FirstHeaderDiv';
-import { Navbar } from './Components/Navbar';
+import Routes from './Components/Routes_Links/Routes';
 
 function App() {
   return (
     <div className="App">
-    <Navbar/>
-    <FirstHeaderDiv />
+    <Routes />
     </div>
   );
 }

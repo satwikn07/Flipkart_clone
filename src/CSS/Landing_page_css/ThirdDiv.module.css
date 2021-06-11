@@ -1,0 +1,43 @@
+.timerDiv {
+  height: 32px;
+  margin: auto;
+  margin-top: 10px;
+  padding: 35px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(202, 200, 200);
+}
+
+.timerSpan {
+  margin-left: 50px;
+  margin-top: 5px;
+}
+
+.card {
+  margin: 0 auto 0 auto;
+  padding: 15px 25px;
+  width: 235px;
+  cursor: pointer;
+}
+.card > div > img {
+  padding: 10px;
+}
+.card > div > img:hover {
+  transform: scale(1.05);
+  /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
+}
+.button {
+  width: 90px;
+  height: 40px;
+  background-color: #047bd5;
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+  cursor: pointer;
+}
+
+.lastDiv:hover {
+  cursor: pointer;
+}

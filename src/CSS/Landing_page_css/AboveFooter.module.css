@@ -1,0 +1,48 @@
+.firsttitl{
+    color: #848484;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: Roboto,Arial,sans-serif;
+    letter-spacing: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.subtitle{
+    color: #848484;
+    text-transform: uppercase;
+    margin-right: 3px;
+    font-weight: 500;
+    font-family: Roboto,Arial,sans-serif;
+    letter-spacing: 0;
+    font-size: 12px;
+    
+    
+
+}
+
+.para{
+    letter-spacing: 0.3;
+    font-size: 12px;
+    color: #848484;
+    text-transform:capitalize;
+    margin-right: 3px;
+    font-weight: 500;
+    font-family: Roboto,Arial,sans-serif; 
+}
+
+.header{
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #878787;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    line-height: 16px;
+}
+.abovebox{
+    margin-left: 10px;
+}
