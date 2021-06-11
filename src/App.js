@@ -13,7 +13,7 @@ import { Navbar } from './Components/Navbar';
 import { SixthDiv } from './Components/SixthDiv';
 import { ThirdHeader } from './Components/ThirdHeaderDiv';
 import { TopFaishionDiv } from './Components/TopFaishion';
-
+import {AddToCart} from './Components/AddToCart'
 function App() {
   return (
     <div className="App">
@@ -31,6 +31,7 @@ function App() {
     <Games />
     <AboveFooter/>
     <FooterPage/>
+    <AddToCart/>
     </div>
   );
 }
