@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import styles from "../CSS/MensClothing.module.css";
+import styles from "../../CSS/Landing_page_css/SixthDiv.module.css";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import {clothing} from "./sub-json";
+import {electronics} from "./sub-json";
 
-function MensClothingdiv(){
+function SixthDiv(){
 
 const responsive = {
     desktop: {
@@ -15,7 +15,7 @@ const responsive = {
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 2,
-      slidesToSlide: 1 // optional, default to 1.
+      slidesToSlide: 2 // optional, default to 1.
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -28,7 +28,8 @@ const responsive = {
 
     <div className={styles.head}>
     <div>
-    <h2 style={{fontSize:"22px",lineHeight:"1.2",fontWeight:"500"}}>Top Men's Wear</h2>
+    <h2 style={{marginTop:"15px",fontSize:"22px",lineHeight:"1.2",fontWeight:"500"}}>Top Deals on Electronics 
+    <p><small style={{fontSize:"14px"}}>Devices and Accessories</small></p></h2>
     </div>
     <button className={styles.button}>VIEW ALL</button>
     </div>
@@ -49,7 +50,7 @@ const responsive = {
   itemClass="carousel-item-padding-40-px"
 >
 
-{clothing.map(el=>{
+{electronics.map(el=>{
     return <div className={styles.card} >
            <div style={{height:"150px"}}><img width="100%" height="90%" src={el.src} alt="pic" /></div>
             <div style={{textAlign:"center"}}>
@@ -66,4 +67,4 @@ const responsive = {
     </div>    
     
 }
-export {MensClothingdiv};
+export {SixthDiv};

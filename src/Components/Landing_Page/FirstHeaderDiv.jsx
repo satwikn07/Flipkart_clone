@@ -1,6 +1,6 @@
 import React from "react";
 import data from "./headersPic.json";
-import styles from "../CSS/FirstHeaderDiv.module.css";
+import styles from "../../CSS/Landing_page_css/FirstHeaderDiv.module.css";
 import { mtopWears } from "./sub-json";
 import {Link} from "react-router-dom";
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "../CSS/SixthDiv.module.css";
+import styles from "../../CSS/Landing_page_css/SixthDiv.module.css";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import {games} from "./sub-json";

@@ -1,4 +1,4 @@
-import styles from '../CSS/AboveFooter.module.css'
+import styles from '../../CSS/Landing_page_css/AboveFooter.module.css'
 
 function AboveFooter(){
     return(
