@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
+import Checkout_Login_Page from '../Checkout.jsx/Checkout_Login_Page';
 import Home from '../Landing_Page/Home';
 
 const Routes = () => {
@@ -10,7 +11,7 @@ const Routes = () => {
                <Home />
             </Route>
             <Route path="/checkout" exact>
-               <h2>checkout</h2>
+               <Checkout_Login_Page />
             </Route>
             <Route>
                 <h2>Not found !</h2>
