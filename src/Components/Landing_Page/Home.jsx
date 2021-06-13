@@ -17,7 +17,7 @@ import { TopFaishionDiv } from './TopFaishion';
 const Home = () => {
     return (
         <div>
-                <Navbar/>
+                {/* <Navbar/> */}
                 <FirstHeaderDiv />
                 <CarouselBox/>
                 <ThirdHeader />
