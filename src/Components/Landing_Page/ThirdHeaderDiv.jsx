@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "../CSS/ThirdDiv.module.css";
+import styles from "../../CSS/Landing_page_css/ThirdDiv.module.css";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import {thirdHeaderData} from "./sub-json";

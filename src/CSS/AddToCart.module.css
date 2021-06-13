@@ -1,6 +1,15 @@
+.box{
+    display: grid;
+    grid-template-columns: auto  auto auto;
+    margin: 10px;
+}
 .bigcont{
     width: 70%;
-    border: 1px solid red;
+    padding:10px;
+    
+    grid-column: 1/span 2 ;
+    margin-left: 50px;
+    background-color: white;
 }
 
 .head{
@@ -9,3 +18,168 @@
     padding: 0 24px;
     font-weight: 500;
 }
+.smallone{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 5px;
+}
+.item{
+    grid-column: 1/ span 2
+  }
+.addrs{
+    font-size: 14px;
+    background-color: #f1f3f6;
+    color: #212121;
+    line-height: 1.4;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 5px;
+}
+
+.offer{
+    color: #388e3c;
+    font-weight: 500;
+   font-size:15px;
+    margin-left:5px
+}
+.mbtn{
+    margin-top: 30px;
+}
+.mbtn  button{
+   border: none;
+   display: inline-block;
+    text-transform: uppercase;
+    box-shadow: none;
+    outline: 0;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 25px;
+    background-color: white;
+}
+.mbtn :hover{
+color:blue;
+}
+.incbtn{
+    margin-top: 55px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 5px;
+    width: 150px;
+}
+.incbtn button{
+
+    background: linear-gradient(#fff,#f9f9f9);
+    display: inline-block;
+    border: 1px solid #c2c2c2;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50%;
+    padding-top: 1px;
+    line-height: 1;
+}
+  
+.proddet{
+  
+   margin-left: -250px;
+   background-color: white;
+}
+.proddet > div:nth-child(1){
+    display: block;
+    text-transform: uppercase;
+    padding: 13px 24px;
+    font-weight: 500;
+    color: #878787;
+    min-height: 47px;
+    border-radius: 2px 2px 0 0;
+}
+.prodbox{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+    
+}
+.prodbox > div:nth-child(1){
+   grid-column : 1/span 2 ;
+} 
+.prodbox > div:nth-child(1) div{
+    color: #212121;
+    line-height: 1.4;
+    font-family: Roboto,Arial,sans-serif;
+    padding: 13px 24px;
+    font-weight: 500;
+    
+    min-height: 47px;
+    border-radius: 2px 2px 0 0;
+}
+.prodbox > div:nth-child(2) div {
+    color: #212121;
+    line-height: 1.4;
+    font-family: Roboto,Arial,sans-serif;
+    padding: 13px 24px;
+    font-weight: 500;
+    
+    min-height: 47px;
+    border-radius: 2px 2px 0 0;
+}
+.pp{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    color: #212121;
+    line-height: 1.4;
+    font-family: Roboto,Arial,sans-serif;
+    padding: 13px 24px;
+    font-weight: 500;
+    font-size: 18px;
+    
+    min-height: 47px;
+    border-radius: 2px 2px 0 0;
+}
+.pp > div:nth-child(1){
+    grid-column : 1/span 2 ;
+ }
+
+ .save{
+    color:  #388e3c;
+    line-height: 1.4;
+    font-family: Roboto,Arial,sans-serif;
+    padding: 13px 24px;
+    font-weight: 500;
+    
+    min-height: 47px;
+    border-radius: 2px 2px 0 0;
+ }
+
+ .prodlast{
+    background: #fffbf6;
+   margin-top: -14px;
+    border-radius: 2px;
+    font-size: 14px;
+    padding-left: 24px;
+    font-family: Roboto,Arial,sans-serif;
+    color: #212121;
+    line-height: 1.4;
+      height: 20px
+ }
+
+ .placebtn{
+    background: #fb641b;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+    border: none;
+    color: #fff;
+    transition: box-shadow .2s ease;
+    vertical-align: super;
+    cursor: pointer;
+    outline: none;
+    font: 400 13.3333px Arial;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    min-width: 250px;
+    padding: 16px 30px;
+    border-radius: 2px;
+    margin-left: 480px;
+ }

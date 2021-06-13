@@ -1,5 +1,5 @@
 import React from 'react'
-import  styles from '../CSS/Navbar.module.css'
+import  styles from '../../CSS/Landing_page_css/Navbar.module.css'
 const Navbar =() =>{
     return(
         <div className={styles.bluenavtop}>
