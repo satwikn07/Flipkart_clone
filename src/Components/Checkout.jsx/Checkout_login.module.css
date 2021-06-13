@@ -12,16 +12,14 @@
 
 .login {
   /* border: 1px sol#2874f0; */
-  padding: 10px 20px;
+  padding: 15px 20px;
   height: 50px;
   text-align: left;
   color: white;
   font-weight: 800;
   background-color: #2874f0;
 }
-.login > h6 {
-  margin-top: 7px;
-}
+
 .loginSpan {
   padding-top: 2px;
   font-size: 16px;
@@ -31,7 +29,9 @@
   margin-right: 20px;
   background-color: white;
   color: #2874f0;
+  border-radius: 4px;
 }
+
 .formDiv {
   /* border: 1px solid #2874f0; */
   /* padding: 15px 25px; */
@@ -67,4 +67,16 @@ button[type="submit"] {
   margin-top: 30px;
   margin-left: 40px;
   display: flex;
+}
+
+.divs {
+  margin-top: 20px;
+  margin-left: 68px;
+  justify-content: center;
+  background-color: #fff;
+  color: grey;
+}
+
+.divs > span {
+  background-color: rgba(245, 245, 245, 0.89);
 }

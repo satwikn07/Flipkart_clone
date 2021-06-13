@@ -4,11 +4,14 @@ import LocalShippingIcon from '@material-ui/icons/LocalShipping';
 
 const Checkout_Login_Page = () => {
 
+    document.title=`flipkart.com:secure payment>login>select shipping address`;
+
     const handleSubmit = (e)=>{
         e.preventDefault();
     }
 
     return (
+        <div>
         <div className={styles.main}>
         <div className={styles.outerDiv}>
             <div style={{fontWeight:"800"}} className={styles.login}>
@@ -39,6 +42,12 @@ const Checkout_Login_Page = () => {
             <div style={{marginLeft:"40px",fontWeight:"500",lineHeight:"1.8",color:"grey"}}>
             Safe and Secure Payments. Easy returns. 100% Authentic products.
             </div>
+        </div>
+        </div>
+        <div style={{width:"64.8%"}}>
+        <div className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>2</span>DELIVERY ADDRESS</div>
+        <div className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>3</span>ORDER SUMMARY</div>
+        <div className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>4</span>PAYMENT OPTIONS</div>
         </div>
         </div>
     );
