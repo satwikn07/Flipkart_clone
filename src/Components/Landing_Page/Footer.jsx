@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
 Box,
 Container,
@@ -88,16 +89,7 @@ Telephone: 1800 202 9898</FooterLink>
 	</Box>
     
 
+
 );
 };
 export default Footer;
-
-				
-				 	
-			
-			
-			 
-		
-			 
-			 
-		

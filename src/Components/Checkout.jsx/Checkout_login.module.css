@@ -1,36 +1,109 @@
 .main {
   display: flex;
+  margin-top: 20px;
 }
 
 .outerDiv {
   margin-left: 5%;
-  width: 60%;
-  border: 1px solid red;
+  width: 75%;
+  /* border: 1px solid red; */
   background-color: #fff;
 }
 
 .login {
-  border: 1px solid blue;
-  padding: 10px 20px;
-  height: 50px;
+  /* border: 1px sol#2874f0; */
+  padding: 15px 20px;
+  /* height: 50px; */
   text-align: left;
   color: white;
-  background-color: blue;
-  font-weight: 500px;
+  font-weight: 800;
+  background-color: #2874f0;
+  border-bottom: 1px solid lightgray;
 }
+
+.login > h6 {
+  font-weight: 700;
+}
+
+.loginSpan {
+  font-size: 16px;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #e8eaec;
+  color: #2874f0;
+  border-radius: 4px;
+}
+
 .formDiv {
-  border: 1px solid blue;
-  padding: 15px 25px;
+  /* border: 1px solid #2874f0; */
+  /* padding: 15px 25px; */
+  margin-left: 30px;
+  margin-right: 10px;
 }
 .inp {
   outline: none;
   padding: 2px;
-  margin: 20px auto 20px;
+  margin: 25px auto 20px;
   border: none;
-  width: 350px;
+  width: 300px;
   background-color: white;
   border-bottom: 1px solid lightgray;
 }
 .para {
-  font-size: 12px;
+  font-size: 13px;
+  color: gray;
+}
+
+button[type="submit"] {
+  width: 300px;
+  margin: 5px auto;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #fb641b;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+/* right blank div after login page  */
+.rightDiv {
+  margin-top: 30px;
+  margin-left: 40px;
+  display: flex;
+}
+
+.divs {
+  margin-top: 20px;
+  margin-left: 68px;
+  justify-content: center;
+  background-color: #fff;
+  color: grey;
+}
+
+.divs > span {
+  background-color: #e8eaec;
+}
+/* css - user details div after login  */
+
+.userDetails {
+  color: black;
+  width: 800px;
+  font-weight: 500;
+  margin-left: 60px;
+}
+
+.changeButton {
+  border: 1px solid lightgray;
+  height: 40px;
+  width: 120px;
+  color: #2874f0;
+  background-color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.addressLabel {
+  width: 90%;
+  margin-left: 15px;
 }

@@ -1,6 +1,14 @@
+import { useHistory } from 'react-router';
 import styles  from '../../CSS/AddToCart.module.css' 
 
 function AddToCart(){
+
+    const check = useHistory();
+
+    const checkout = ()=>{
+        check.push("/checkout");
+    }
+
     return(
         <div className={styles.box} style={{ backgroundColor: "#f1f3f6"}}>
            <div className={styles.bigcont}>
@@ -40,7 +48,7 @@ function AddToCart(){
                    
                </div>
                <div> 
-                      <button className={styles.placebtn}>PLACE ORDER</button>
+                      <button onClick={checkout} className={styles.placebtn}>PLACE ORDER</button>
                   </div>
              
            </div>
