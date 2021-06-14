@@ -1,8 +1,8 @@
 import React from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
-import '@fortawesome/fontawesome-free/css/fontawesome.css'
+// import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+// import '@fortawesome/fontawesome-free/css/fontawesome.css'
 //import "bootstrap-css-only/css/bootstrap.min.css";
-import "mdbreact/dist/css/mdb.css";
+// import "mdbreact/dist/css/mdb.css";
 import styled from 'styled-components'
 const FooterPage = () => {
   
@@ -27,7 +27,7 @@ const FooterPage = () => {
      
   return (
     <div style={{backgroundColor:"rgba(9,14,22,255)"}}> 
-    <MDBFooter    className="font-small pt-4 mt-7">
+    {/* <MDBFooter    className="font-small pt-4 mt-7">
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol>
@@ -172,7 +172,7 @@ const FooterPage = () => {
           </MDBRow>
         </MDBContainer>
       </div>
-    </MDBFooter>
+    </MDBFooter> */}
     </div>
   );
 };

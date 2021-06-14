@@ -13,21 +13,25 @@
 .login {
   /* border: 1px sol#2874f0; */
   padding: 15px 20px;
-  height: 50px;
+  /* height: 50px; */
   text-align: left;
   color: white;
   font-weight: 800;
   background-color: #2874f0;
+  border-bottom: 1px solid lightgray;
+}
+
+.login > h6 {
+  font-weight: 700;
 }
 
 .loginSpan {
-  padding-top: 2px;
   font-size: 16px;
   padding-left: 6px;
   padding-right: 6px;
   margin-left: 20px;
   margin-right: 20px;
-  background-color: white;
+  background-color: #e8eaec;
   color: #2874f0;
   border-radius: 4px;
 }
@@ -41,14 +45,14 @@
 .inp {
   outline: none;
   padding: 2px;
-  margin: 20px auto 20px;
+  margin: 25px auto 20px;
   border: none;
   width: 300px;
   background-color: white;
   border-bottom: 1px solid lightgray;
 }
 .para {
-  font-size: 12px;
+  font-size: 13px;
   color: gray;
 }
 
@@ -78,5 +82,28 @@ button[type="submit"] {
 }
 
 .divs > span {
-  background-color: rgba(245, 245, 245, 0.89);
+  background-color: #e8eaec;
+}
+/* css - user details div after login  */
+
+.userDetails {
+  color: black;
+  width: 800px;
+  font-weight: 500;
+  margin-left: 60px;
+}
+
+.changeButton {
+  border: 1px solid lightgray;
+  height: 40px;
+  width: 120px;
+  color: #2874f0;
+  background-color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.addressLabel {
+  width: 90%;
+  margin-left: 15px;
 }
