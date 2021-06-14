@@ -43,10 +43,11 @@ function FirstHeaderDiv(){
               <h6 className={styles.dropbtn}>{data[3].desc}</h6>
                 <div className={styles.dropdowncontent}>
                     <div href="#" className={styles.dropdown}>
-                    <label className={styles.dropbtn}>Men's Top Wear</label>
+                    <label className={styles.dropbtn}><a href="/product_description">Men's Top Wear</a></label>
+                    {/**Above line Has to be changed  later*/}
                     <div className={styles.dropdowncontent} style={{left:"335px",marginTop:"-31px"}}>
                       {mtopWears.map(item=>{
-                        return <Link>{item}</Link>
+                        return <Link >{item}</Link> 
                       })}
                     </div>
                     </div><br/>
