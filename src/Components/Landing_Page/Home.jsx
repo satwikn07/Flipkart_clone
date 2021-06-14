@@ -4,7 +4,7 @@ import { BestAppliances } from './BestAppliances';
 import { CarouselBox } from './Carousel';
 import FifthDiv from './FifthDiv';
 import { FirstHeaderDiv } from './FirstHeaderDiv';
-import FooterPage from './Footer';
+import Footer from './Footer';
 import FourthDiv from './FourthDiv';
 import { Furniture } from './Furniture';
 import { Games } from './Games';
@@ -18,6 +18,7 @@ const Home = () => {
     return (
         <div>
                 {/* <Navbar/> */}
+                <Navbar />
                 <FirstHeaderDiv />
                 <CarouselBox/>
                 <ThirdHeader />
@@ -30,7 +31,7 @@ const Home = () => {
                 <Furniture />
                 <Games />
                 <AboveFooter/>
-                <FooterPage/>
+                <Footer/>
         </div>
     );
 };

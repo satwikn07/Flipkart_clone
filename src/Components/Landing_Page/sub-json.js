@@ -40,10 +40,10 @@ const electronics =[
                 desc:"masks, body pain,relief"
         },
         {
-                src:"https://rukminim1.flixcart.com/image/550/550/k5lcvbk0pkrrdj/headphone/dynamic/z/j/h/jbl-c150siublk-original-imafeyby52kxehz2.jpeg?q=70",
+                src:"https://rukminim1.flixcart.com/image/550/550/khdqnbk0/computer/5/d/e/apple-original-imafxfyqkdfxqjab.jpeg?q=70",
                 heading:"electronics",
                 discount:"10% off",
-                desc:"masks, body pain,relief"
+                desc:"Laptop,desktop"
         },
         {
                 src:"https://rukminim1.flixcart.com/image/550/550/k2f1n680/headphone/9/g/s/boat-rockerz-400-super-extra-bass-original-imafg95ztgz7z8yz.jpeg?q=70",

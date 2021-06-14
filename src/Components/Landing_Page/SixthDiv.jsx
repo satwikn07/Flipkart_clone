@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
+import {useHistory} from "react-router";
 import styles from "../../CSS/Landing_page_css/SixthDiv.module.css";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import {electronics} from "./sub-json";
 
 function SixthDiv(){
+
+  const history = useHistory();
 
 const responsive = {
     desktop: {
@@ -22,6 +25,10 @@ const responsive = {
       items: 1,
       slidesToSlide: 1 // optional, default to 1.
     }
+}
+
+const description =()=>{
+  history.push("/product_description");
 }
 
     return <div className={styles.main}>
@@ -51,7 +58,7 @@ const responsive = {
 >
 
 {electronics.map(el=>{
-    return <div className={styles.card} >
+    return <div onClick={description} className={styles.card} >
            <div style={{height:"150px"}}><img width="100%" height="90%" src={el.src} alt="pic" /></div>
             <div style={{textAlign:"center"}}>
             <strong>{el.heading}</strong>

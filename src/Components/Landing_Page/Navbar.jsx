@@ -12,10 +12,10 @@ const Navbar =() =>{
                         </svg>
                     </button>
                     <div className={styles.dropdown}>
-  <button className={styles.dropbtn}>My Account</button>
+  <button className={styles.dropbtn1}>Login</button>
   <div className={styles.dropdowncontent}>
     <a href="#">My Profile</a>
-    <a href="#">SuperCoin Zone</a>
+    {/* <a href="#">SuperCoin Zone</a> */}
     <a href="#">Flipkart Plus Zone</a>
     <a href="#">Orders</a>
     <a href="#">Wishlist</a>
@@ -28,7 +28,7 @@ const Navbar =() =>{
 </div>
 
        <div className={styles.dropdown}>
-  <button className={styles.dropbtn}>More</button>
+  <button className={styles.dropbtn2}>More</button>
   <div className={styles.dropdowncontent}>
     <a href="#">Notification Prefernces</a>
     <a href="#">Sell on Flipkart</a>
