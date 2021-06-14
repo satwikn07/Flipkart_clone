@@ -1,10 +1,11 @@
 import React from 'react'
 import  styles from '../../CSS/Landing_page_css/Navbar.module.css'
+import { Link } from 'react-router-dom'
 const Navbar =() =>{
     return(
         <div className={styles.bluenavtop}>
             <div>
-                <img className={styles.flipkartlogo} alt="flipkart-logo" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png"/>
+                <Link to="/"><img className={styles.flipkartlogo} alt="flipkart-logo" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png"/></Link>
                <input  className={styles.searchbox}  type="text" placeholder="Search for products brands and more"/>
                <button className={styles.searchicon}>
                         <svg width="20px" height="20px">

@@ -56,11 +56,12 @@ export const Description = ()=>{
                <input type="radio" name="exchange" id="" /><span style={{padding:"5%",color:"#212121",fontSize:"14px",fontWeight:"400"}}>Buy without exchange <span style={{padding:"10%",color:"#212121",fontSize:"14px",fontWeight:"500"}}>  ₹29,990</span></span> <br /> {/**The discounted rate here */}
                 <input type="radio" name="exchange" id="" /><span style={{padding:"5%",color:"#212121",fontSize:"14px",fontWeight:"400"}}> Buy with exchange <span style={{padding:"10%",color:"#212121",fontSize:"14px",fontWeight:"500"}}>   up to ₹15,650 off</span></span>
             </div>
+            
+            <div style={{fontSize:"24px",fontWeight:"500"}}>Specifications</div>
+            {specifications.map(el=><Featurecontent info={el}/>)}
             <div>
                 <img src="warranty.png" alt="" style={{width:"100%"}}/>
             </div>
-            <div style={{fontSize:"24px",fontWeight:"500"}}>Specifications</div>
-            {specifications.map(el=><Featurecontent info={el}/>)}
             <div>
                 <img src="bought_together.png" alt="" style={{width:"100%"}}/>
             </div>
