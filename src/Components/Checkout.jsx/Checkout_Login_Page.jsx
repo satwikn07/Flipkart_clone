@@ -143,7 +143,8 @@ const Checkout_Login_Page = () => {
         {/* before selecting address */}
         {!delivered ? <div className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>3</span>ORDER SUMMARY</div>:<>
         {/* after delivery address selected */}
-        <div style={{backgroundColor:"blue",color:"white"}} className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>3</span>ORDER SUMMARY</div>
+        {!gotoPayment && <>
+        <div style={{backgroundColor:"#2874f0",color:"white"}} className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>3</span>ORDER SUMMARY</div>
         <div className={`${styles.divs} ${styles.loginSpan}`} style={{width:"92.3%",marginTop:0,color:"black"}}>        
         <div style={{width:"90%",padding:"10px",paddingLeft:"35px"}}>
         
@@ -174,7 +175,7 @@ const Checkout_Login_Page = () => {
         
         </div>
 
-        </div>
+        </div></>}
         
         </>}
 
@@ -187,8 +188,13 @@ const Checkout_Login_Page = () => {
         <button style={{outline:"none"}} className={styles.changeButton}>CHANGE</button>
         </div>}
 
-
+        {/* before order */}
         <div className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>4</span>PAYMENT OPTIONS</div>
+        {/* after order */}
+        <div className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>4</span>PAYMENT OPTIONS</div>
+
+
+
         </div>
         
         </div>
