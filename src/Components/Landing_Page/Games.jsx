@@ -24,12 +24,12 @@ const responsive = {
     }
 }
 
-    return <div className={styles.main}>
+    return <div className={styles.main} style={{marginBottom:"50px"}}>
 
     <div className={styles.head}>
     <div>
-    <h2 style={{marginTop:"15px",fontSize:"22px",lineHeight:"1.2",fontWeight:"500px"}}>Furniture Bestsellers 
-    <p><small style={{fontSize:"14px"}}>upto 70% off</small></p></h2>
+    <h2 style={{marginTop:"15px",fontSize:"22px",lineHeight:"1.2",fontWeight:"500px"}}>Games 
+    <p><small style={{fontSize:"14px"}}>upto 50% off</small></p></h2>
     </div>
     <button className={styles.button}>VIEW ALL</button>
     </div>
@@ -52,7 +52,7 @@ const responsive = {
 
 {games.map(el=>{
     return <div className={styles.card} >
-           <div style={{height:"150px"}}><img width="100%" height="90%" src={el.src} alt="pic" /></div>
+           <div style={{height:"160px"}}><img style={{objectFit:"cover"}} width="100%" height="90%" src={el.src} alt="pic" /></div>
             <div style={{textAlign:"center"}}>
             <strong>{el.heading}</strong>
             <p style={{color:"green"}}>{el.discount}</p>

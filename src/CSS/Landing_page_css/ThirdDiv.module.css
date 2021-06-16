@@ -22,9 +22,14 @@
 }
 .card > div > img {
   padding: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  object-fit: cover;
+  /* transition: all 100ms ease-in-out; */
 }
 .card > div > img:hover {
   transform: scale(1.05);
+  /* transition: all 100ms ease-in-out; */
   /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
 }
 .button {
