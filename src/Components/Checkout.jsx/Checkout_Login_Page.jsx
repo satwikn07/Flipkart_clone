@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from "./Checkout_login.module.css";
+import {Navbar} from "../Landing_Page/Navbar";
 
 const Checkout_Login_Page = () => {
 
@@ -33,6 +34,7 @@ const Checkout_Login_Page = () => {
 
     return (
         <div>
+        <Navbar />
         {!isAuth ? <>
             <div className={styles.main}>
         <div className={styles.outerDiv}>
