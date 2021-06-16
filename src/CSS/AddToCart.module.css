@@ -8,7 +8,7 @@
     padding:10px;
     
     grid-column: 1/span 2 ;
-    margin-left: 50px;
+    margin-left: 20px;
     background-color: white;
 }
 
@@ -20,7 +20,7 @@
 }
 .smallone{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     padding: 5px;
 }
 .item{
@@ -79,12 +79,14 @@ color:blue;
     font-size: 16px;
     border-radius: 50%;
     padding-top: 1px;
+    width: 40px;
+    height: 40px;
     line-height: 1;
 }
   
 .proddet{
   
-   margin-left: -250px;
+   margin-left: -350px;
    background-color: white;
 }
 .proddet > div:nth-child(1){
@@ -97,14 +99,15 @@ color:blue;
     border-radius: 2px 2px 0 0;
 }
 .prodbox{
-    display: grid;
-    grid-template-columns: auto auto auto;
+   display: flex;
+   justify-content: space-between;
+   
     
     
 }
-.prodbox > div:nth-child(1){
+/* .prodbox > div:nth-child(1){
    grid-column : 1/span 2 ;
-} 
+}  */
 .prodbox > div:nth-child(1) div{
     color: #212121;
     line-height: 1.4;
@@ -162,6 +165,7 @@ color:blue;
     font-family: Roboto,Arial,sans-serif;
     color: #212121;
     line-height: 1.4;
+    padding: 5px;
        
  }
 
@@ -181,7 +185,8 @@ color:blue;
     min-width: 250px;
     padding: 16px 30px;
     border-radius: 2px;
-    margin-left: 480px;
+    margin-left:650px;
+    margin-top: 30px;
  }
  .modal{
     
@@ -232,3 +237,11 @@ color:blue;
     margin-left: 500px;
 
  }
+ .rightDiv {
+    margin-top: 30px;
+    
+    display: flex;
+    margin-left: 980px;
+   
+    width:30% ;
+  }
