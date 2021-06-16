@@ -52,7 +52,7 @@ const responsive = {
 
 {furniture.map(el=>{
     return <div className={styles.card} >
-           <div style={{height:"150px"}}><img width="100%" height="90%" src={el.src} alt="pic" /></div>
+           <div style={{height:"150px"}}><img style={{objectFit:"cover"}} width="100%" height="90%" src={el.src} alt="pic" /></div>
             <div style={{textAlign:"center"}}>
             <strong>{el.heading}</strong>
             <p style={{color:"green"}}>{el.discount}</p>

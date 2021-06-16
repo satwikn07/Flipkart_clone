@@ -1,11 +1,11 @@
 .linkdiv {
   display: flex;
-  border-bottom: 1px solid grey;
   margin-top: 0;
   margin-right: -30px;
   justify-content: center;
   position: relative;
   background-color: white;
+  border-bottom: 0.2px solid rgb(172, 171, 171);
 }
 
 .link {

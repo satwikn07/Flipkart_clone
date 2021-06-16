@@ -31,49 +31,49 @@ const electronics =[
                 src:"https://rukminim1.flixcart.com/image/550/550/ja73ki80/webcam/pc-webcam/7/q/e/logitech-c310-original-imaeztzqny7jh7gh.jpeg?q=70",
                 heading:"electronics",
                 discount:"10% off",
-                desc:"masks, body pain,relief"
+                desc:"camera and flashes"
         },
         {
                 src:"https://rukminim1.flixcart.com/image/550/550/k6mibgw0/datacard/r/h/g/jiofi-jmr-541-original-imafpfhandhkptwc.jpeg?q=70",
                 heading:"electronics",
-                discount:"10% off",
-                desc:"masks, body pain,relief"
+                discount:"15% off",
+                desc:"routers,tp-link,jio etc"
         },
         {
                 src:"https://rukminim1.flixcart.com/image/550/550/khdqnbk0/computer/5/d/e/apple-original-imafxfyqkdfxqjab.jpeg?q=70",
                 heading:"electronics",
-                discount:"10% off",
+                discount:"14% off",
                 desc:"Laptop,desktop"
         },
         {
                 src:"https://rukminim1.flixcart.com/image/550/550/k2f1n680/headphone/9/g/s/boat-rockerz-400-super-extra-bass-original-imafg95ztgz7z8yz.jpeg?q=70",
                 heading:"electronics",
-                discount:"10% off",
-                desc:"masks, body pain,relief"
+                discount:"25% off",
+                desc:"earphones,headphones,jbl"
         },
         {
                 src:"https://rukminim1.flixcart.com/image/550/550/k8et4sw0/selector-box/e/f/5/mi-box-4k-original-imafqfzyyxuegayw.jpeg?q=70",
                 heading:"electronics",
                 discount:"10% off",
-                desc:"masks, body pain,relief"
+                desc:"mi gadgests,remote,tv"
         },
         {
                 src:"https://rukminim1.flixcart.com/image/550/550/jsrtn680/cooling-pad/f/j/z/tarkan-4-fans-original-imafe9w4gxyphh37.jpeg?q=70",
                 heading:"electronics",
-                discount:"10% off",
-                desc:"masks, body pain,relief"
+                discount:"20% off",
+                desc:"cooling fan"
         },
         {
                 src:"https://rukminim1.flixcart.com/image/550/550/jm9hfgw0/data-cable/hdmi-cable/f/z/y/terabyte-hdmi-to-vga-original-imaf97x2jw9kwkgy.jpeg?q=70",
                 heading:"electronics",
-                discount:"10% off",
-                desc:"masks, body pain,relief"
+                discount:"15% off",
+                desc:"power bank,data cable"
         },
         {
                 src:"https://rukminim1.flixcart.com/image/550/550/k9d3p8w0/headphone/j/v/f/rockerz-255f-rockerz-255-boat-original-imafr68zshenv3ya.jpeg?q=70",
                 heading:"electronics",
-                discount:"10% off",
-                desc:"masks, body pain,relief"
+                discount:"30% off",
+                desc:"earphones wireless"
         },
 ]
 
@@ -129,46 +129,46 @@ const thirdHeaderData = [
 
 const clothing = [
         {
-                src:"https://rukminim1.flixcart.com/image/550/550/jku1ksw0/cargo/t/z/p/42-code-1-plus91-original-imaf83hx5tzvddwh.jpeg?q=70",
-                heading:"electronics",
-                discount:"10% off",
-                desc:"masks, body pain,relief"
+                src:"https://rukminim1.flixcart.com/image/495/594/kcnp8y80/t-shirt/f/l/e/m-den001dgryblk-denzolee-original-imaftqfdjgweepyr.jpeg?q=50",
+                heading:"clothing",
+                discount:"15% off",
+                desc:"round neck t-shirt"
         },
         {
                 src:"https://rukminim1.flixcart.com/image/550/550/k44hksw0/t-shirt/m/t/r/m-dv24solidmustard-diversify-original-imafkbzvhcn3vgs7.jpeg?q=70",
-                heading:"electronics",
+                heading:"clothing",
                 discount:"10% off",
-                desc:"masks, body pain,relief"
+                desc:"round neck t-shirt"
         },
         {
                 src:"https://rukminim1.flixcart.com/image/550/550/jvsf3ww0/jacket/g/z/z/l-1826111-invictus-original-imafghx9m4b7nqyz.jpeg?q=70",
-                heading:"electronics",
+                heading:"clothing",
                 discount:"10% off",
-                desc:"masks"
+                desc:"men's jacket"
         },
         {
-                src:"https://rukminim1.flixcart.com/image/550/550/jtsz3bk0/boxer/c/v/t/xl-3-boxer-025-avrro-original-imaf2eheh9szvtha.jpeg?q=70",
-                heading:"electronics",
-                discount:"10% off",
-                desc:"masks, body pain,relief"
+                src:"https://rukminim1.flixcart.com/image/495/594/jsw3yq80/jean/y/h/g/32-mss19ajn021-metronaut-original-imafede592htbgqp.jpeg?q=50",
+                heading:"clothing",
+                discount:"20% off",
+                desc:"slim fit dark jeans"
         },
         {
                 src:"https://rukminim1.flixcart.com/image/550/550/jll6xzk0/t-shirt/z/3/h/m-51700902black-puma-original-imaf8zhfvp83rghg.jpeg?q=70",
-                heading:"electronics",
-                discount:"10% off",
-                desc:"masks, body pain,relief"
+                heading:"clothing",
+                discount:"27% off",
+                desc:"full sleeve t-shirt"
         },
         {
-                src:"https://rukminim1.flixcart.com/flap/550/550/image/57b64c251e5af10e.jpg?q=70",
-                heading:"electronics",
-                discount:"10% off",
-                desc:"masks, body pain,relief"
+                src:"https://rukminim1.flixcart.com/image/495/594/jxp08sw0/shirt/h/s/8/38-zbsh511-light-green-38-zombom-original-imafg3z4n4kjrpfd.jpeg?q=50",
+                heading:"clothing",
+                discount:"18% off",
+                desc:"men regular fit shirt"
         },
         {
                 src:"https://rukminim1.flixcart.com/image/550/550/jku1ksw0/cargo/t/z/p/42-code-1-plus91-original-imaf83hx5tzvddwh.jpeg?q=70",
-                heading:"electronics",
-                discount:"10% off",
-                desc:"masks, body pain,relief"
+                heading:"clothing",
+                discount:"20% off",
+                desc:"cargo jeans pant"
         }
 
 ]
@@ -176,186 +176,186 @@ const clothing = [
 const topFaishion = [
         {
                 src:"https://rukminim1.flixcart.com/image/550/550/k4rcmfk0/sunglass/c/f/h/medium-tony-stark-royal-son-original-imafng5hfzfxcn9e.jpeg?q=70",
-                heading:"electronics",
+                heading:"sunglasses",
                 discount:"10% off",
-                desc:"masks, body pain,relief"
+                desc:"gansta uv protect..."
         },
         {
                 src:"https://rukminim1.flixcart.com/image/550/550/kjn6qvk0-0/shoe/d/c/v/ck2669-001nike-12-nike-black-white-smoke-grey-original-imafz5vwe5t53z3t.jpeg?q=70",
-                heading:"electronics",
-                discount:"10% off",
-                desc:"masks, body pain,relief"
+                heading:"footwear",
+                discount:"18% off",
+                desc:"shoes nike, adidas"
         },
         {
                 src:"https://rukminim1.flixcart.com/image/550/550/klicfww0/slipper-flip-flop/l/p/i/6-cn9675-002nike-nike-black-white-black-original-imagymeqtprn7qvv.jpeg?q=70",
-                heading:"electronics",
+                heading:"footwear",
                 discount:"10% off",
-                desc:"masks, body pain,relief"
+                desc:"flip flops"
         },
         {
-                src:"https://rukminim1.flixcart.com/image/550/550/k0plpjk0/kids-short/d/d/x/2-3-years-59698501-puma-original-imafkekwtjptths7.jpeg?q=70",
-                heading:"electronics",
-                discount:"10% off",
-                desc:"masks, body pain,relief"
+                src:"https://rukminim1.flixcart.com/image/495/594/kbpeoi80/shirt/9/m/5/xl-hlsh011893-highlander-original-imafszke55ngsd94.jpeg?q=50",
+                heading:"clothing",
+                discount:"15% off",
+                desc:"fit stripped yellow shirt"
         },
         {
-                src:"https://rukminim1.flixcart.com/image/550/550/k65d18w0/kids-short/e/h/c/2-3-years-absrergf936958-allen-solly-original-imafzz3aghrzunpc.jpeg?q=70",
-                heading:"electronics",
-                discount:"10% off",
-                desc:"masks, body pain,relief"
+                src:"https://rukminim1.flixcart.com/image/495/594/kmxsakw0/t-shirt/u/5/7/s-tw-3015peacock-tricky-wear-original-imagfqh8hqsfftyq.jpeg?q=50",
+                heading:"clothing",
+                discount:"25% off",
+                desc:"solid men hooded..."
         },
         {
-                src:"https://rukminim1.flixcart.com/image/550/550/jx3kn0w0/slipper-flip-flop/8/y/b/368272-8-puma-ponderosa-pine-black-white-original-imafhmr9n22rakag.jpeg?q=70",
-                heading:"electronics",
-                discount:"10% off",
-                desc:"masks, body pain,relief"
+                src:"https://rukminim1.flixcart.com/image/495/594/kdakakw0/coat/4/t/7/s-31222201-forever-21-original-imafu8h6gfxu3dyr.jpeg?q=50",
+                heading:"clothing",
+                discount:"20% off",
+                desc:"polyester blend coat"
         },
         {
-                src:"https://rukminim1.flixcart.com/image/550/550/jmccb680/short/h/v/c/l-allovr-hotfits-original-imaf99gfcgntcskb.jpeg?q=70",
-                heading:"electronics",
+                src:"https://rukminim1.flixcart.com/image/495/594/kfoapow0-0/jean/h/q/7/36-ss19hwjn008-herway-original-imafw2g5dyhc8fwe.jpeg?q=50",
+                heading:"clothing",
                 discount:"10% off",
-                desc:"masks, body pain,relief"
+                desc:"skinny women jeans"
         },
         {
-                src:"https://rukminim1.flixcart.com/image/550/550/k0zlsi80/fabric/h/f/b/svivarsha2777-sharvi-original-imafja6qmwfxqday.jpeg?q=70",
-                heading:"electronics",
-                discount:"10% off",
-                desc:"masks, body pain,relief"
+                src:"https://rukminim1.flixcart.com/image/495/594/k7ry3680/cap/x/a/7/free-self-design-hip-hop-ua-craft-original-imafpx5hsm46qtbh.jpeg?q=50",
+                heading:"caps",
+                discount:"22% off",
+                desc:"solid Xo caps"
         },
 ]
 
 const appliances = [
         {
-                src:"https://rukminim1.flixcart.com/image/950/950/knoxnrk0/television/o/u/j/l75m6-esg-mi-original-imag2bg4t5sjhw6c.jpeg?q=70",
-                heading:"Appliance",
-                discount:"10% off",
-                desc:"masks, body pain,relief"
+                src:"https://rukminim1.flixcart.com/image/612/612/kcnp8y80/mixer-grinder-juicer/a/c/g/flipkart-smartbuy-classico-original-imaftqtemnytsdkd.jpeg?q=70",
+                heading:"electronics",
+                discount:"21% off",
+                desc:"mixer grinder"
         },
         {
-                src:"https://rukminim1.flixcart.com/image/950/950/jjkbhjk0/sandwich-maker/5/q/g/nova-2-slice-sandwich-maker-original-imaf74a8zrqzfgug.jpeg?q=70",
-                heading:"electronics",
-                discount:"10% off",
-                desc:"masks, body pain,relief"
+                src:"https://rukminim1.flixcart.com/image/612/612/kikluvk0-0/pop-up-toaster/i/j/y/apt-09-green-apt-09-g-warmex-home-appliances-original-imafybvftqzgdpkf.jpeg?q=70",
+                heading:"kitchen appliance",
+                discount:"33% off",
+                desc:"pop up toaster"
         },
         {
                 src:"https://rukminim1.flixcart.com/image/950/950/jcjejrk0/egg-cooker/w/c/x/16020-kent-original-imaffn6mkqnhhz6w.jpeg?q=70",
-                heading:"electronics",
-                discount:"10% off",
-                desc:"masks, body pain,relief"
+                heading:"kitchen appliance",
+                discount:"28% off",
+                desc:"egg cooker"
         },
         {
                 src:"https://rukminim1.flixcart.com/image/950/950/kk01pjk0/fan/d/d/l/tiktik-quiet-portable-table-fan-zigma-original-imafzg7ftzuckpad.jpeg?q=70",
                 heading:"electronics",
                 discount:"10% off",
-                desc:"masks, body pain,relief"
+                desc:"table fan"
         },
         {
-                src:"https://rukminim1.flixcart.com/image/950/950/jvzkb680/landline-phone/s/n/d/x70-beetel-original-imafgrsxar98ze9s.jpeg?q=70",
-                heading:"electronics",
+                src:"https://rukminim1.flixcart.com/image/612/612/kg8avm80/electric-kettle/y/v/z/orbon-exclusive-measuring-model-matte-silver-1-2-litre-1630-original-imafwgk97dv5chha.jpeg?q=70",
+                heading:"kitchen appliance",
                 discount:"10% off",
-                desc:"masks, body pain,relief"
+                desc:"electric jug heater"
         },
         {
-                src:"https://rukminim1.flixcart.com/image/950/950/jlzhci80/kitchen-press/b/a/z/ge123c-opera-original-imaf8zxuswsnqtgq.jpeg?q=70",
-                heading:"electronics",
-                discount:"10% off",
-                desc:"masks, body pain,relief"
+                src:"https://rukminim1.flixcart.com/image/612/612/kihqz680-0/induction-cook-top/d/m/s/feel-induction-cooktop-touch-panel-2000-watt-bic-114-baltra-original-imafya54acsxk4gc.jpeg?q=70",
+                heading:"kitchen appliance",
+                discount:"22% off",
+                desc:"radiant cook top"
         },
         {
-                src:"https://rukminim1.flixcart.com/image/950/950/kae95e80/television/f/6/y/realme-tv-32-original-imafrz79pweqeafh.jpeg?q=70",
+                src:"https://rukminim1.flixcart.com/image/312/312/kdga1zk0/television/b/y/w/iffalcon-32e32-32e32-original-imafucgeqxhhjt3u.jpeg?q=70",
                 heading:"electronics",
                 discount:"10% off",
-                desc:"masks, body pain,relief"
+                desc:"iFFalcon by TCL"
         },
 ]
 
 const furniture = [
         {
-                src:"https://rukminim1.flixcart.com/image/550/550/jsm3vrk0/bunk-loft-bed/w/b/q/na-rubber-wood-27035-woodness-dark-brown-original-imafe47eukgzsjkr.jpeg?q=70",
+                src:"https://rukminim1.flixcart.com/image/550/550/office-study-table/n/g/k/winner-study-table-particle-board-spacewood-walnut-rigato-original-imaej3cjapzrefuf.jpeg?q=70",
                 heading:"Furniture",
                 discount:"10% off",
-                desc:"furniture"
+                desc:"bestselling study tables"
         },
         {
                 src:"https://rukminim1.flixcart.com/image/550/550/ke7ff680/hammock-swing/j/f/u/q3-jkaf-y3l0-furniture-kart-original-imafux96kpy7grch.jpeg?q=70",
                 heading:"Furniture",
-                discount:"10% off",
-                desc:"furniture"
+                discount:"40% off",
+                desc:"swing"
         },
         {
                 src:"https://rukminim1.flixcart.com/image/550/550/bean-bag/h/v/b/f8-the-furniture-store-xxxl-original-imae65d3wg7qzpkn.jpeg?q=70",
                 heading:"Furniture",
-                discount:"10% off",
-                desc:"furniture"
+                discount:"55% off",
+                desc:"sofa bean bag"
         },
         {
-                src:"https://rukminim1.flixcart.com/image/550/550/jlcmavk0/aquarium-tank/s/4/5/usb-desktop-aquarium-with-running-water-calendar-temperature-and-original-imaf8hv4nkv55gx8.jpeg?q=70",
+                src:"https://rukminim1.flixcart.com/image/550/550/jhgl5e80/bed/x/z/4/queen-na-particle-board-kosmo-mayflower-queen-bed-with-3-4th-original-imaf5gfajmxewbhy.jpeg?q=70",
                 heading:"Furniture",
-                discount:"10% off",
-                desc:"furniture"
+                discount:"49% off",
+                desc:"bestselling beds"
         },
         {
-                src:"https://rukminim1.flixcart.com/image/550/550/jfk00i80/inflatable-sofa/d/g/q/pvc-leatherette-2-seater-inflatable-sofa-color-black-wds-original-imaf3j6fzyhywqrq.jpeg?q=70",
+                src:"https://rukminim1.flixcart.com/image/550/550/jll6xzk0/bar-cabinet/m/a/w/rosewood-sheesham-bc2wl055g-flipkart-perfect-homes-walnut-original-imaf8zkenz6r34pb.jpeg?q=70",
                 heading:"Furniture",
-                discount:"10% off",
-                desc:"furniture"
+                discount:"67% off",
+                desc:"bar cabinets"
         },
         {
-                src:"https://rukminim1.flixcart.com/image/550/550/jffpoy80/office-study-chair/v/v/z/pp-am-5001cb-apex-original-imaf3u8rbr5cdycv.jpeg?q=70",
+                src:"https://rukminim1.flixcart.com/image/550/550/jmwch3k0/rocking-chair/r/7/f/1-seater-teak-sagun-rocking-chr-omaha-wallnut-dzyn-furnitures-original-imaf9p5epvzqqssx.jpeg?q=70",
                 heading:"Furniture",
-                discount:"10% off",
-                desc:"furniture"
+                discount:"50% off",
+                desc:"rocking chairs"
         },
         {
                 src:"https://rukminim1.flixcart.com/image/550/550/jlqwpe80-1/tv-entertainment-unit/d/t/f/particle-board-holland-tv-unit-black-forzza-black-original-imaf8t5ybywcdtys.jpeg?q=70",
                 heading:"Furniture",
-                discount:"10% off",
-                desc:"furniture"
+                discount:"70% off",
+                desc:"tv unit"
         }
 ]
 
 const games = [
         {
                 src:"https://rukminim1.flixcart.com/image/550/550/jw6pifk0/gamingconsole/w/h/x/1-ps4-sony-na-original-imafgxcny6pp6zqm.jpeg?q=70",
-                heading:"Furniture",
+                heading:"games",
                 discount:"10% off",
-                desc:"games"
+                desc:"sony ps4 1 tb"
         },
         {
-                src:"https://rukminim1.flixcart.com/image/550/550/jp8ngcw0/computer/m/g/h/microsoft-na-2-in-1-laptop-original-imafbgqzhjhmthh2.jpeg?q=70",
-                heading:"Furniture",
-                discount:"10% off",
-                desc:"games"
+                src:"https://rukminim1.flixcart.com/image/612/612/k0sgl8w0/gaming-accessory-kit/game-controller/k/u/z/buy-surety-1-pair-pubg-moible-controller-gamepad-trigger-l1-r1-original-imafkfjtv3xs3xxh.jpeg?q=70",
+                heading:"games",
+                discount:"40% off",
+                desc:"mobile controller g..."
         },
         {
                 src:"https://rukminim1.flixcart.com/image/550/550/kihqz680-0/gaming-accessory-kit/game-kit/x/l/h/pubg-anti-slip-thumb-sleeve-slip-proof-sweat-proof-professional-original-imafy9xhwczbkh6e.jpeg?q=70",
-                heading:"Furniture",
-                discount:"10% off",
-                desc:"games"
+                heading:"games",
+                discount:"35% off",
+                desc:"antislip thumb sleeve"
         },
         {
-                src:"https://rukminim1.flixcart.com/image/550/550/k6qsn0w0/tablet/3/q/z/lenovo-za5g0047in-original-imafp4w7qvpnprv5.jpeg?q=70",
-                heading:"Furniture",
-                discount:"10% off",
-                desc:"games"
+                src:"https://rukminim1.flixcart.com/image/612/612/gamepad/p/p/g/red-gear-pro-series-wireless-original-imaehzcnndxdst2d.jpeg?q=70",
+                heading:"games",
+                discount:"40% off",
+                desc:"redgear pro series "
         },
         {
                 src:"https://rukminim1.flixcart.com/image/550/550/jhql8cw0/headphone/9/p/e/acer-predator-galea-500-original-imaf5zx5e8ypbjpg.jpeg?q=70",
-                heading:"Furniture",
-                discount:"10% off",
-                desc:"games"
+                heading:"games",
+                discount:"30% off",
+                desc:"headphone with mic"
         },
         {
-                src:"https://rukminim1.flixcart.com/image/550/550/kdnf98w0/physical-game/c/b/z/standard-edition-ghost-of-tsushima-full-game-ps4-original-imafugaspppyx68s.jpeg?q=70",
-                heading:"Furniture",
+                src:"https://rukminim1.flixcart.com/image/612/612/kl8ccy80/gaming-accessory-kit/mobile-joystick/v/e/0/pubg-sensitive-shoot-aim-buttons-r1-l1-trigger-mobile-game-original-imagyedgbazzsypq.jpeg?q=70",
+                heading:"games",
                 discount:"10% off",
-                desc:"games"
+                desc:"scoria pubg sensitive"
         },
         {
-                src:"https://rukminim1.flixcart.com/image/550/550/jxnksy80/tablet/u/h/h/samsung-sm-t290nzkains-original-imafg2ghyj9zhgnv.jpeg?q=70",
-                heading:"Furniture",
-                discount:"10% off",
-                desc:"games"
+                src:"https://rukminim1.flixcart.com/image/612/612/klqx30w0/mousepad/w/t/b/mousepad-combo-pack-of-2-stop-thinking-and-grey-black-bat-smuly-original-imagytag24k4fvbh.jpeg?q=70",
+                heading:"games",
+                discount:"55% off",
+                desc:"smuly mousepad"
         },
 ]
 export {fashionData1,electronics,mtopWears,thirdHeaderData,

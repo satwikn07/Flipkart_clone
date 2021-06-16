@@ -23,6 +23,7 @@
 }
 .card > div > img {
   padding: 10px;
+  object-fit: cover;
 }
 .card > div > img:hover {
   transform: scale(1.05);
