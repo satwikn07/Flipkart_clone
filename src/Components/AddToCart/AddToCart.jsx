@@ -1,17 +1,23 @@
+import { useState } from 'react';
 import { useHistory } from 'react-router';
 import styles  from '../../CSS/AddToCart.module.css' 
 import {Navbar} from "../Landing_Page/Navbar";
 
+import Modal from 'react-modal'; 
 function AddToCart(){
-
+    const [isOpen, setIsOpen] = useState(false);
+    const [savelater, setSavelater]= useState(false)
     const check = useHistory();
 
     const checkout = ()=>{
         check.push("/checkout");
     }
+    function toggleModal() {
+        setIsOpen(!isOpen);
+      }
+     
 
-    return(<>
-        <Navbar />
+     return   (!savelater)?  (
         <div className={styles.box} style={{ backgroundColor: "#f1f3f6"}}>
            <div className={styles.bigcont}>
                <div className={styles.smallone}>
@@ -40,7 +46,19 @@ function AddToCart(){
                     <p style={{display:" block", color: "#878787", fontSize: "14px",  height: "20px"}}>Seller:PETILANTE Online  <span><img height="30px" width="100px" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fa_62673a.png"/></span>  </p> 
                       <div style={{fontSize: "18px", fontWeight: "500", color:" #212121"}}>₹35,990 <span style={{color: "#878787", textDecoration: "line-through",  fontSize:"15px"}}>₹45,090</span><span className={styles.offer} >20% Off  11 offers applied</span></div>
                      <div className={styles.mbtn}>
-                         <span><button>SAVE FOR LATER</button> <button>REMOVE</button></span>
+                         <span><button onClick={()=> setSavelater(prev=>!prev)} >SAVE FOR LATER</button> <button onClick={toggleModal}>REMOVE</button></span>
+                         
+      <Modal
+        isOpen={isOpen}
+        onRequestClose={toggleModal}
+        contentLabel="My dialog"
+       className={styles.modal}
+        
+      >
+        <div className={styles.modalp}>Remove Item</div>
+        <div  className={styles.modalk}>Are you sure you want to remove this item?</div>
+      <span> <button onClick={toggleModal}>CANCEL</button><button style={{marginLeft:"50px", color:"white", backgroundColor:"#2874f0"}} >REMOVE</button></span>  
+        </Modal>
                      </div>
                   </div>
                   <div>
@@ -86,7 +104,10 @@ function AddToCart(){
                    
               </div>
         </div>
-        </>
+    ): (
+        <div>
+           Hi
+        </div>
     )
 
 }

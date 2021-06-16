@@ -162,7 +162,7 @@ color:blue;
     font-family: Roboto,Arial,sans-serif;
     color: #212121;
     line-height: 1.4;
-      height: 20px
+       
  }
 
  .placebtn{
@@ -183,3 +183,40 @@ color:blue;
     border-radius: 2px;
     margin-left: 480px;
  }
+ .modal{
+    
+    width: 400px;
+    height: 250px;
+     margin: auto;
+     opacity: 1;
+     border-radius: 5px;
+    pointer-events: auto;
+    margin-top: 200px;
+    background-color: rgba(255,255,255,255);
+ }
+ .modalp{
+    padding: 26px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #212121;
+    line-height: 1.4;
+}
+.modalk{
+    padding: 0 26px 50px;
+    color: #878787;
+    font-size: 16px;
+}
+.modal button {
+    font-weight: 500;
+    padding: 10px 0;
+    min-width: 120px;
+    border-radius: 2px;
+    box-shadow: none;
+    border: 1px solid #c2c2c2;
+    text-transform: uppercase;
+    text-align: center;
+    margin-left: 50px;
+    font-size: 16px;
+}
+
+ 
