@@ -10,6 +10,8 @@ const Checkout_Login_Page = () => {
     const [flag,setFlag] = useState(false);
     const [isAuth,setIsAuth] = useState(false);
     const [delivered,setDelivered] = useState(false);
+    const [isAddressSelected,setIsAddressSelected] = useState(false);
+    const [gotoPayment,setGoToPayment] = useState(false)
 
     const handleSubmit = (e)=>{
         e.preventDefault();
@@ -30,6 +32,11 @@ const Checkout_Login_Page = () => {
 
     const deliver =()=>{
         setDelivered(true)
+    }
+
+    const toPayment =()=>{
+
+        setGoToPayment(true);
     }
 
     return (
@@ -133,8 +140,54 @@ const Checkout_Login_Page = () => {
         <button style={{outline:"none"}} className={styles.changeButton}>CHANGE</button>
         </div> */}
         
+        {/* before selecting address */}
+        {!delivered ? <div className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>3</span>ORDER SUMMARY</div>:<>
+        {/* after delivery address selected */}
+        <div style={{backgroundColor:"blue",color:"white"}} className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>3</span>ORDER SUMMARY</div>
+        <div className={`${styles.divs} ${styles.loginSpan}`} style={{width:"92.3%",marginTop:0,color:"black"}}>        
+        <div style={{width:"90%",padding:"10px",paddingLeft:"35px"}}>
+        
+        <div style={{display:"flex",marginTop:"10px"}}>
 
-        <div className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>3</span>ORDER SUMMARY</div>
+            <div className={styles.addressLabel} >
+            <div style={{display:"flex",justifyContent:"space-between"}}>
+                <div>
+                <h5 style={{lineHeight:".6"}}>Pay Using Super Coins</h5>
+                <p>Balance : 0</p>
+                </div>
+                <div style={{marginRight:"-128px"}}>
+                <button style={{outline:"none"}} className={styles.changeButton}>
+                <i style={{color:"blue",marginRight:"5PX",fontWeight:"500"}} class="fas fa-check fa-1x"></i>
+                APPLIED</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div>Product details from cart section</div>
+        </div>
+        </div>
+        <div className={`${styles.login} ${styles.divs}`} style={{justifyContent:"center",alignItems:"center"}}>
+        <div>
+        <p style={{color:"black",fontWeight:"400"}}>order confirmation email will be sent to <span style={{fontWeight:"500"}}> afzal@gmail.com</span> 
+        <button onClick={toPayment} type="submit" style={{width:"160px",marginLeft:"607px",padding: "10px 5px"}}>CONTINUE</button>
+        </p>
+        
+        </div>
+
+        </div>
+        
+        </>}
+
+        {gotoPayment &&
+        <div style={{width:"92.3%",display:"flex",justifyContent:"space-between"}} className={`${styles.login} ${styles.divs}`}>
+        <div><span className={styles.loginSpan}>3</span>
+        ORDER SUMMARY <i style={{color:"blue",marginLeft:"5px",fontWeight:"500"}} class="fas fa-check fa-1x"></i> <br/>
+        <span className={styles.userDetails}>1 item</span>
+        </div>
+        <button style={{outline:"none"}} className={styles.changeButton}>CHANGE</button>
+        </div>}
+
+
         <div className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>4</span>PAYMENT OPTIONS</div>
         </div>
         
