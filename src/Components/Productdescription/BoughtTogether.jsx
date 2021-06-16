@@ -1,8 +1,13 @@
 import { useState } from "react"
 import { Card } from "./Card"
 import { Btn } from "./Gallery"
+import { Redirect, useHistory } from "react-router"
 export const BoughtTogether = ()=>{
     const a = {display:"flex",alignItems:"center", justifyContent:"center",fontSize:"40px",fontWeight:"700"}
+    const history = useHistory();
+    const addToCart =()=>{
+        history.push("/viewcart")
+    }
     
     const items = [
         {
@@ -35,6 +40,7 @@ export const BoughtTogether = ()=>{
     ]
     const [totalPrice, setTotalPrice] = useState(0) // here total price is add ons price
     const [i, setI] = useState(1);
+    
     return(
         <div>
             <div style={{fontSize:"24px", paddingLeft:"4%", fontWeight:"550", marginBottom:"5vh"}}>Frequently Bought Together</div>
@@ -61,12 +67,12 @@ export const BoughtTogether = ()=>{
                    <span style={{color:"#878787", fontSize:"16px"}}>Total</span> <br />
                    <span style={{color:"#212121",fontSize:"18px",fontWeight:"550"}}>₹{items[0].price + totalPrice}</span>
                </div>
-               <div style={{paddingTop:"2%"}}><Btn colour="#ff9f00" height="7vh"><i class="fa fa-shopping-cart" style={{fontSize:"16px", color:"white"}}/>ADD {i} ITEMS TO CART</Btn></div>
+               <div style={{paddingTop:"2%"}}><Btn onClick={addToCart} colour="#ff9f00" height="7vh"><i class="fa fa-shopping-cart" style={{fontSize:"16px", color:"white"}}/>ADD {i} ITEMS TO CART</Btn></div>
           </div>:<div style={{display:"grid", gridTemplateColumns:"70% 30%",paddingRight:"4vw", paddingTop:"1vh"}}>
                  <div style={{paddingTop:"2%", fontWeight:"500", fontSize:"16px", paddingLeft:"4%"}}>
                     Please add at least 1 add-on item to proceed
                 </div>
-                <div><Btn colour="#878787" height="7vh" cursor="not-allowed"><i class="fa fa-shopping-cart" style={{fontSize:"16px", color:"white"}}/>{`  ADD TO CART`}</Btn></div>
+                <div><Btn colour="#878787" height="7vh" cursor="not-allowed" ><i class="fa fa-shopping-cart" style={{fontSize:"16px", color:"white"}}/>{`  ADD TO CART`}</Btn></div>
            </div>
             }
            
