@@ -1,5 +1,34 @@
+import { useState } from "react"
+import { BoughtTogether } from "./BoughtTogether";
 import { Featurecontent } from "./Feature_content"
+import { Offers } from "./Offers";
+import Styles from './Description.module.css'
 export const Description = ()=>{
+    const [showMore,setShowMore] = useState(false);
+    const offers = [
+        {head:"Bank Offer",body:"10% off on SBI Credit Card, up to ₹1250. On orders of ₹5000 and above",tail:"T&C"},
+        {head:"Bank Offer",body:"10% off on SBI Credit Card EMI, up to ₹1500. On orders of ₹5000 and above",tail:"T&C"},
+        {head:"Bank Offer",body:"5% Unlimited Cashback on Flipkart Axis Bank Credit Card",tail:"T&C"},
+        {head:"",body:"Get a Google Nest Hub (Chalk) at just ₹5,999 on purchase of select TVs, laptops, ACs and mobile",tail:"T&C"},
+        {head:"",body:"Get Google Nest mini at just ₹1999 on purchase of select Smartphones, TVs, Laptops, TV streaming",tail:"T&C"},
+        {head:"No cost EMI ₹6,415/month.",body:" Standard EMI also available",tail:"View Plans >"},
+        {head:"Bank Offer",body:"Flat ₹100 off on first Flipkart Pay Later order of ₹500 and above",tail:"T&C"},
+        {head:"",body:"Get Mi Smart Speaker at just ₹1999 on purchase of select Smartphones, TVs, Laptops,TV streaming & Ac",tail:"T&C"},
+        {head:"",body:"Get a Lenovo Smart Clock Essential at just ₹1,999 on purchase of select TVs, laptops, ACs&Mobiles",tail:"T&C"},
+        {head:"Partner Offer",body:"GST Invoice Available! Save up to 28% for business purchases",tail:"Know More"},
+        {head:"Partner Offer",body:"On Purchase of this device, get ProGrad Junior Spark program worth INR 4,999 for free",tail:"Know More"},
+        {head:"Partner Offer",body:"On Purchase of this device, get offers on Codingal Courses worth up to ₹20,000",tail:"Know More"},
+        {head:"Partner Offer",body:"On purchase of this device, avail flat 15% off on all courses on Vedantu.",tail:"Know More"},
+        {head:"Partner Offer",body:"On purchase of this device, get Edukemy’s Neev course worth ₹4999 for free.",tail:"Know More"},
+        {head:"Partner Offer",body:"On purchase of this device, get offers on Avishkaar Courses worth up to ₹9,000",tail:"Know More"},
+        {head:"Partner Offer",body:"Purchase now using GST Invoice feature. Get 5% off up to Rs500 on electronics items from 1-15th July",tail:"Know More"},
+    ]
+    const offers_4 = [
+        {head:"Bank Offer",body:"10% off on SBI Credit Card, up to ₹1250. On orders of ₹5000 and above",tail:"T&C"},
+        {head:"Bank Offer",body:"10% off on SBI Credit Card EMI, up to ₹1500. On orders of ₹5000 and above",tail:"T&C"},
+        {head:"Bank Offer",body:"5% Unlimited Cashback on Flipkart Axis Bank Credit Card",tail:"T&C"},
+        {head:"",body:"Get a Google Nest Hub (Chalk) at just ₹5,999 on purchase of select TVs, laptops, ACs and mobile",tail:"T&C"},
+    ]   
     const specifications = [
         {
             type:"General",
@@ -47,24 +76,19 @@ export const Description = ()=>{
             <span style={{color:"#212121",backgroundColor:'white',fontSize:"16px",fontWeight:"400",textDecoration:"none",marginRight:"1vw",fontFamily:"Roboto"}}>Or Pay ₹29,890 + <img src="https://rukminim1.flixcart.com/www/100/100/promos/18/07/2019/4aebbd99-7478-411e-aced-265e7722d18d.png?q=90" alt="" style={{height:"12px"}}/> 100</span>{/**Price - 100 */} <br />
 
             <span style={{color:"#212121",backgroundColor:'rgba(0, 0, 0, 0)',fontSize:"16px",fontWeight:"500",fontFamily:"Roboto"}}>Available Offers</span> <br />
-            <span style={{fontSize:"14px"}}> <img src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" style={{height:"18px"}} /><span style={{color:"#212121",fontWeight:"500"}}>Bank Offer</span><span style={{fontWeight:"400"}}>  5% Unlimited Cashback on Flipkart Axis Bank Credit Card</span><span style={{color:"#2874f0",fontWeight:"500"}}> T&C</span></span> <br />
-            <span style={{fontSize:"14px"}}> <img src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" style={{height:"18px"}} /><span style={{color:"#212121",fontWeight:"500"}}>Bank Offer</span><span style={{fontWeight:"400"}}>  Flat ₹75 discount on UPI transaction above ₹10,000 in a single cart value</span><span style={{color:"#2874f0",fontWeight:"500"}}> T&C</span></span> <br />
-            <span style={{fontSize:"14px"}}> <img src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" style={{height:"18px"}} /><span style={{color:"#212121",fontWeight:"500"}}>Bank Offer</span><span style={{fontWeight:"400"}}>  Flat ₹75 discount on RuPay transaction above ₹7,500/- in a single cart value.</span><span style={{color:"#2874f0",fontWeight:"500"}}> T&C</span></span> <br />
-            <span style={{fontSize:"14px"}}><span style={{fontWeight:"400"}}>  Get a Google Nest Hub (Chalk) at just ₹5,999 on purchase of select TVs, laptops, ACs and mobile</span><span style={{color:"#2874f0",fontWeight:"500"}}> T&C</span></span> <br />
-            <span style={{color:"#2874f0",fontWeight:"500",fontSize:"14px"}}>View 14 more offers</span><br />
+            {showMore?offers.map(el=><Offers head={el.head} tail={el.tail} body={el.body} />):offers_4.map(el=><Offers head={el.head} tail={el.tail} body={el.body} />)} 
+            <div style={{color:"#2874f0",fontWeight:"550",fontSize:"16px",cursor:"pointer"}} onClick={()=>{setShowMore(!showMore)}}>{showMore?'View less':'View 13 more offers'}</div><br />
             <div>
-               <input type="radio" name="exchange" id="" /><span style={{padding:"5%",color:"#212121",fontSize:"14px",fontWeight:"400"}}>Buy without exchange <span style={{padding:"10%",color:"#212121",fontSize:"14px",fontWeight:"500"}}>  ₹29,990</span></span> <br /> {/**The discounted rate here */}
-                <input type="radio" name="exchange" id="" /><span style={{padding:"5%",color:"#212121",fontSize:"14px",fontWeight:"400"}}> Buy with exchange <span style={{padding:"10%",color:"#212121",fontSize:"14px",fontWeight:"500"}}>   up to ₹15,650 off</span></span>
+               <input type="radio" name="exchange" id="" /><span style={{padding:"5%",color:"#212121",fontSize:"16px",fontWeight:"400"}}>Buy without exchange <span style={{padding:"10%",color:"#212121",fontSize:"14px",fontWeight:"500"}}>  ₹29,990</span></span> <br /> {/**The discounted rate here */}
+                <input type="radio" name="exchange" id="" /><span style={{padding:"5%",color:"#212121",fontSize:"16px",fontWeight:"400"}}> Buy with exchange <span style={{padding:"10%",color:"#212121",fontSize:"14px",fontWeight:"500"}}>   up to ₹15,650 off</span></span>
             </div>
-            
-            <div style={{fontSize:"24px",fontWeight:"500"}}>Specifications</div>
-            {specifications.map(el=><Featurecontent info={el}/>)}
             <div>
                 <img src="warranty.png" alt="" style={{width:"100%"}}/>
             </div>
-            <div>
-                <img src="bought_together.png" alt="" style={{width:"100%"}}/>
-            </div>
+            <div style={{fontSize:"24px",fontWeight:"500"}}>Specifications</div>
+            {specifications.map(el=><Featurecontent info={el}/>)}
+           
+            <BoughtTogether />
             <div>
                 <img src="Ratings.png" alt="" style={{width:"100%"}}/>
             </div>
