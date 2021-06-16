@@ -7,6 +7,7 @@ import Modal from 'react-modal';
 function AddToCart(){
     const [isOpen, setIsOpen] = useState(false);
     const [savelater, setSavelater]= useState(false)
+    const [count, setCount]= useState(1)
     const check = useHistory();
 
     const checkout = ()=>{
@@ -16,9 +17,12 @@ function AddToCart(){
         setIsOpen(!isOpen);
       }
      
+      const handleInc =(num)=> {
+        setCount(prev=> prev+num)
+      }
 
      return   (!savelater)?  (
-        <div className={styles.box} style={{ backgroundColor: "#f1f3f6"}}>
+        <div   className={styles.box} style={{ backgroundColor: "#f1f3f6"}}>
            <div className={styles.bigcont}>
                <div className={styles.smallone}>
                    <div className={styles.item} className={styles.head}>My Cart(no of itms)</div>
@@ -35,9 +39,9 @@ function AddToCart(){
                    <div> 
                <img style={{height:"100px"}} alt="" src="https://rukminim1.flixcart.com/image/224/224/kbb49zk0/computer/d/e/h/lenovo-na-laptop-original-imafsnkx6gytzqzh.jpeg?q=90"/>
                    <div className={styles.incbtn}>
-                        <button>-</button>
-                        <div style={{border:"1px solid grey" }}>count</div>
-                        <button>+</button> 
+                        <button onClick={()=>handleInc(-1)}>-</button>
+                        <div style={{border:"1px solid grey" }}>{count}</div>
+                        <button onClick={()=>handleInc(1)}>+</button> 
                    </div>
                </div>
                   <div>
@@ -106,8 +110,59 @@ function AddToCart(){
         </div>
     ): (
         <div>
-           Hi
+           <div className={styles.svltr}>
+           <div className={styles.item} className={styles.head}>My Cart</div>
+           <img   src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" />
+             <div style={{textAlign:"center", display: "block", fontSize: "18px", marginTop: "24px", color:"212121"}}>Your Cart is Empty</div>
+             <div  style={{textAlign:"center", display: "block", fontSize: "12px", marginTop: "10px", color:"212121", paddingBottom:"24px"}}>It's a good day to buy the items you saved for later!</div>
+           </div>
+           <div style={{width:"90%", marginTop:"5vh"}}  className={styles.bigcont}>
+               <div className={styles.smallone}>
+                   <div className={styles.item} className={styles.head}>Saved for Later(no of itms)</div>
+                   <div>
+                   <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZWxsaXBzZSBjeD0iOSIgY3k9IjE0LjQ3OCIgZmlsbD0iI0ZGRTExQiIgcng9IjkiIHJ5PSIzLjUyMiIvPjxwYXRoIGZpbGw9IiMyODc0RjAiIGQ9Ik04LjYwOSA3LjAxYy0xLjA4IDAtMS45NTctLjgyNi0xLjk1Ny0xLjg0NSAwLS40ODkuMjA2LS45NTguNTczLTEuMzA0YTIuMDIgMi4wMiAwIDAgMSAxLjM4NC0uNTRjMS4wOCAwIDEuOTU2LjgyNSAxLjk1NiAxLjg0NCAwIC40OS0uMjA2Ljk1OS0uNTczIDEuMzA1cy0uODY0LjU0LTEuMzgzLjU0ek0zLjEzIDUuMTY1YzAgMy44NzQgNS40NzkgOC45MjIgNS40NzkgOC45MjJzNS40NzgtNS4wNDggNS40NzgtOC45MjJDMTQuMDg3IDIuMzEzIDExLjYzNCAwIDguNjA5IDAgNS41ODMgMCAzLjEzIDIuMzEzIDMuMTMgNS4xNjV6Ii8+PC9nPjwvc3ZnPg==" />
+                   </div>
+                   <div style={{border:"1px solid grey"}}>
+                      <div>Minakshi Das, <span className={styles.addrs}>Nearby GP office</span></div>
+                   </div>
+               </div>
+               <hr/>
+             
+               <div className={styles.products}>
+                   <div> 
+               <img style={{height:"100px"}} alt="" src="https://rukminim1.flixcart.com/image/224/224/kbb49zk0/computer/d/e/h/lenovo-na-laptop-original-imafsnkx6gytzqzh.jpeg?q=90"/>
+                   <div className={styles.incbtn}>
+                        <button>-</button>
+                        <div style={{border:"1px solid grey" }}>count</div>
+                        <button>+</button> 
+                   </div>
+               </div>
+                  <div>
+                      <a   style={{fontSize: "16px", color:"#212121", lineHeight:"1",display:"inline",fontFamily: "Roboto,Arial,sans-serif", fontWeight:"500"}}>Lenovo Ideapad Core i3 10th Gen (..</a>
+                     <p style={{display:" block", color: "#878787", fontSize: "14px",  height: "20px"}}>15.6 inch, Platinum Grey, 1.85 kg, With MS Office</p>
+                    <p style={{display:" block", color: "#878787", fontSize: "14px",  height: "20px"}}>Seller:PETILANTE Online  <span><img height="30px" width="100px" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fa_62673a.png"/></span>  </p> 
+                      <div style={{fontSize: "18px", fontWeight: "500", color:" #212121"}}>₹35,990 <span style={{color: "#878787", textDecoration: "line-through",  fontSize:"15px"}}>₹45,090</span><span className={styles.offer} >20% Off  11 offers applied</span></div>
+                     <div className={styles.mbtn}>
+                         <span><button onClick={()=> setSavelater(prev=>!prev)} >MOVE TO CART</button> <button onClick={toggleModal}>REMOVE</button></span>
+                         
+      <Modal
+        isOpen={isOpen}
+        onRequestClose={toggleModal}
+        contentLabel="My dialog"
+       className={styles.modal}
+        
+      >
+        <div className={styles.modalp}>Remove Item</div>
+        <div  className={styles.modalk}>Are you sure you want to remove this item?</div>
+      <span> <button onClick={toggleModal}>CANCEL</button><button style={{marginLeft:"50px", color:"white", backgroundColor:"#2874f0"}} >REMOVE</button></span>  
+        </Modal>
+                     </div>
+                     </div>
+
         </div>
+        </div>
+        </div>
+
     )
 
 }
