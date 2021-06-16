@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import styles  from '../../CSS/AddToCart.module.css' 
 import {Navbar} from "../Landing_Page/Navbar";
@@ -8,8 +8,12 @@ function AddToCart(){
     const [isOpen, setIsOpen] = useState(false);
     const [savelater, setSavelater]= useState(false)
     const [count, setCount]= useState(1)
+    const [price, setPrice]= useState(0)
+    const [discount, setDiscount]= useState(0)
+    const [total, setTotal] = useState(0)
+    const [remove, setRemove] = useState(true)
     const check = useHistory();
-
+console.log(remove)
     const checkout = ()=>{
         check.push("/checkout");
     }
@@ -20,15 +24,27 @@ function AddToCart(){
       const handleInc =(num)=> {
         setCount(prev=> prev+num)
       }
-
-     return   (!savelater)?  (
+       useEffect(()=> {
+           setPrice(35990*count)
+           var dis= count * 1000
+           setDiscount( dis)
+           setTotal(price-discount)
+       },[count,price,discount])
+        
+       return !savelater? 
+            (   
+          <div> 
+         <Navbar/>
         <div   className={styles.box} style={{ backgroundColor: "#f1f3f6"}}>
            <div className={styles.bigcont}>
-               <div className={styles.smallone}>
-                   <div className={styles.item} className={styles.head}>My Cart(no of itms)</div>
+           <div className={styles.smallone}>
+                   <div className={styles.item} className={styles.head}>My Cart ({count})</div>
                    <div>
-                   <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZWxsaXBzZSBjeD0iOSIgY3k9IjE0LjQ3OCIgZmlsbD0iI0ZGRTExQiIgcng9IjkiIHJ5PSIzLjUyMiIvPjxwYXRoIGZpbGw9IiMyODc0RjAiIGQ9Ik04LjYwOSA3LjAxYy0xLjA4IDAtMS45NTctLjgyNi0xLjk1Ny0xLjg0NSAwLS40ODkuMjA2LS45NTguNTczLTEuMzA0YTIuMDIgMi4wMiAwIDAgMSAxLjM4NC0uNTRjMS4wOCAwIDEuOTU2LjgyNSAxLjk1NiAxLjg0NCAwIC40OS0uMjA2Ljk1OS0uNTczIDEuMzA1cy0uODY0LjU0LTEuMzgzLjU0ek0zLjEzIDUuMTY1YzAgMy44NzQgNS40NzkgOC45MjIgNS40NzkgOC45MjJzNS40NzgtNS4wNDggNS40NzgtOC45MjJDMTQuMDg3IDIuMzEzIDExLjYzNCAwIDguNjA5IDAgNS41ODMgMCAzLjEzIDIuMzEzIDMuMTMgNS4xNjV6Ii8+PC9nPjwvc3ZnPg==" />
+                       
+                   <img style={{marginLeft:"320px"}} src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZWxsaXBzZSBjeD0iOSIgY3k9IjE0LjQ3OCIgZmlsbD0iI0ZGRTExQiIgcng9IjkiIHJ5PSIzLjUyMiIvPjxwYXRoIGZpbGw9IiMyODc0RjAiIGQ9Ik04LjYwOSA3LjAxYy0xLjA4IDAtMS45NTctLjgyNi0xLjk1Ny0xLjg0NSAwLS40ODkuMjA2LS45NTguNTczLTEuMzA0YTIuMDIgMi4wMiAwIDAgMSAxLjM4NC0uNTRjMS4wOCAwIDEuOTU2LjgyNSAxLjk1NiAxLjg0NCAwIC40OS0uMjA2Ljk1OS0uNTczIDEuMzA1cy0uODY0LjU0LTEuMzgzLjU0ek0zLjEzIDUuMTY1YzAgMy44NzQgNS40NzkgOC45MjIgNS40NzkgOC45MjJzNS40NzgtNS4wNDggNS40NzgtOC45MjJDMTQuMDg3IDIuMzEzIDExLjYzNCAwIDguNjA5IDAgNS41ODMgMCAzLjEzIDIuMzEzIDMuMTMgNS4xNjV6Ii8+PC9nPjwvc3ZnPg==" />
+                     
                    </div>
+                   <div style={{fontWeight: "500",color: "#878787"}}>Deliver to</div>
                    <div style={{border:"1px solid grey"}}>
                       <div>Minakshi Das, <span className={styles.addrs}>Nearby GP office</span></div>
                    </div>
@@ -39,8 +55,8 @@ function AddToCart(){
                    <div> 
                <img style={{height:"100px"}} alt="" src="https://rukminim1.flixcart.com/image/224/224/kbb49zk0/computer/d/e/h/lenovo-na-laptop-original-imafsnkx6gytzqzh.jpeg?q=90"/>
                    <div className={styles.incbtn}>
-                        <button onClick={()=>handleInc(-1)}>-</button>
-                        <div style={{border:"1px solid grey" }}>{count}</div>
+                        <button disabled={count==1} onClick={()=>handleInc(-1)}>-</button>
+                        <div style={{border:"1px solid grey",padding:"5px",paddingLeft:"15px", width:"50px" }}>{count}</div>
                         <button onClick={()=>handleInc(1)}>+</button> 
                    </div>
                </div>
@@ -61,7 +77,8 @@ function AddToCart(){
       >
         <div className={styles.modalp}>Remove Item</div>
         <div  className={styles.modalk}>Are you sure you want to remove this item?</div>
-      <span> <button onClick={toggleModal}>CANCEL</button><button style={{marginLeft:"50px", color:"white", backgroundColor:"#2874f0"}} >REMOVE</button></span>  
+      <span> <button onClick={toggleModal}>CANCEL</button><button style={{marginLeft:"50px", color:"white", backgroundColor:"#2874f0"}} onClick={()=> setRemove(prev=> !prev)} >REMOVE</button></span>  
+      
         </Modal>
                      </div>
                   </div>
@@ -82,20 +99,20 @@ function AddToCart(){
                   <hr/>
                   <div className={styles.prodbox}>
                       <div>
-                          <div>Price (2 items)  </div>
+                          <div>Price ({count})  </div>
                           <div>Discount</div>
                           <div>Delivery Charges</div>
                       </div>
                       <div>
-                          <div>₹1,27,370</div>
-                          <div style={{color:" #388e3c"}} >− ₹25,400</div>
-                        <div  style={{color:" #388e3c", marginLeft:"30px"}}>FREE</div>  
+                          <div>{`₹${price}`}</div>
+                          <div style={{color:" #388e3c"}} >{`₹${discount}`}</div>
+                        <div  style={{color:" #388e3c"}}>FREE</div>  
                       </div>  
                   </div>
                   <div style={ {border: "none",borderTop: "1px dotted grey"}}></div>
                   <div className={styles.pp}>
                       <div>Total Amount </div>
-                      <div  style={{ marginLeft:"70px"}} >₹1,01,970</div>
+                      <div  style={{ marginLeft:"70px"}} >{`₹ ${total}`}</div>
                   </div>
                   <div style={ {marginTop:"10px" , border: "none",borderTop: "1px dotted grey"}}></div>
                   <div className={styles.save}>You will save ₹25,400 on this order</div>
@@ -107,8 +124,20 @@ function AddToCart(){
                   </div>
                    
               </div>
+              <div className={styles.rightDiv}>
+            <div style={{width:"29px",height:"36px"}}>
+                <img width="100%" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/shield_5f9216.png" alt="pic" />
+            </div>
+            <div style={{ fontWeight:"400",lineHeight:"1.8",color:"grey"}}>
+            Safe and Secure Payments. Easy returns. 100% Authentic products.
+            </div>
         </div>
-    ): (
+             
+        </div>
+        
+        </div>
+            ):(
+            
         <div>
            <div className={styles.svltr}>
            <div className={styles.item} className={styles.head}>My Cart</div>
@@ -116,16 +145,20 @@ function AddToCart(){
              <div style={{textAlign:"center", display: "block", fontSize: "18px", marginTop: "24px", color:"212121"}}>Your Cart is Empty</div>
              <div  style={{textAlign:"center", display: "block", fontSize: "12px", marginTop: "10px", color:"212121", paddingBottom:"24px"}}>It's a good day to buy the items you saved for later!</div>
            </div>
-           <div style={{width:"90%", marginTop:"5vh"}}  className={styles.bigcont}>
+           <div style={{width:"90%", marginTop:"5vh", marginLeft:"46px"}}  className={styles.bigcont}>
                <div className={styles.smallone}>
                    <div className={styles.item} className={styles.head}>Saved for Later(no of itms)</div>
                    <div>
-                   <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZWxsaXBzZSBjeD0iOSIgY3k9IjE0LjQ3OCIgZmlsbD0iI0ZGRTExQiIgcng9IjkiIHJ5PSIzLjUyMiIvPjxwYXRoIGZpbGw9IiMyODc0RjAiIGQ9Ik04LjYwOSA3LjAxYy0xLjA4IDAtMS45NTctLjgyNi0xLjk1Ny0xLjg0NSAwLS40ODkuMjA2LS45NTguNTczLTEuMzA0YTIuMDIgMi4wMiAwIDAgMSAxLjM4NC0uNTRjMS4wOCAwIDEuOTU2LjgyNSAxLjk1NiAxLjg0NCAwIC40OS0uMjA2Ljk1OS0uNTczIDEuMzA1cy0uODY0LjU0LTEuMzgzLjU0ek0zLjEzIDUuMTY1YzAgMy44NzQgNS40NzkgOC45MjIgNS40NzkgOC45MjJzNS40NzgtNS4wNDggNS40NzgtOC45MjJDMTQuMDg3IDIuMzEzIDExLjYzNCAwIDguNjA5IDAgNS41ODMgMCAzLjEzIDIuMzEzIDMuMTMgNS4xNjV6Ii8+PC9nPjwvc3ZnPg==" />
+                       
+                   <img style={{marginLeft:"550px"}} src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZWxsaXBzZSBjeD0iOSIgY3k9IjE0LjQ3OCIgZmlsbD0iI0ZGRTExQiIgcng9IjkiIHJ5PSIzLjUyMiIvPjxwYXRoIGZpbGw9IiMyODc0RjAiIGQ9Ik04LjYwOSA3LjAxYy0xLjA4IDAtMS45NTctLjgyNi0xLjk1Ny0xLjg0NSAwLS40ODkuMjA2LS45NTguNTczLTEuMzA0YTIuMDIgMi4wMiAwIDAgMSAxLjM4NC0uNTRjMS4wOCAwIDEuOTU2LjgyNSAxLjk1NiAxLjg0NCAwIC40OS0uMjA2Ljk1OS0uNTczIDEuMzA1cy0uODY0LjU0LTEuMzgzLjU0ek0zLjEzIDUuMTY1YzAgMy44NzQgNS40NzkgOC45MjIgNS40NzkgOC45MjJzNS40NzgtNS4wNDggNS40NzgtOC45MjJDMTQuMDg3IDIuMzEzIDExLjYzNCAwIDguNjA5IDAgNS41ODMgMCAzLjEzIDIuMzEzIDMuMTMgNS4xNjV6Ii8+PC9nPjwvc3ZnPg==" />
+                     
                    </div>
+                   <div style={{fontWeight: "500",color: "#878787"}}>Deliver to</div>
                    <div style={{border:"1px solid grey"}}>
                       <div>Minakshi Das, <span className={styles.addrs}>Nearby GP office</span></div>
                    </div>
                </div>
+                       
                <hr/>
              
                <div className={styles.products}>
@@ -162,8 +195,10 @@ function AddToCart(){
         </div>
         </div>
         </div>
-
-    )
+    
+            )
+         
+                                     
 
 }
 export  {AddToCart}
