@@ -132,6 +132,7 @@ const Checkout_Login_Page = () => {
         </div>
         <button style={{outline:"none"}} className={styles.changeButton}>CHANGE</button>
         </div> */}
+        
 
         <div className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>3</span>ORDER SUMMARY</div>
         <div className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>4</span>PAYMENT OPTIONS</div>

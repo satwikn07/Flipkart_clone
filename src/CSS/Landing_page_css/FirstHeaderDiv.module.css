@@ -18,13 +18,14 @@
 }
 
 .card {
-  width: 100px;
   margin: 10px;
   margin-bottom: 0;
   text-align: center;
 }
+
 .card :hover {
   color: #047bd5;
+  cursor: pointer;
 }
 .desc {
   margin-top: 0;
