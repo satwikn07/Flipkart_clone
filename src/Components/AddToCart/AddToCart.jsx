@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router';
 import styles  from '../../CSS/AddToCart.module.css' 
+import {Navbar} from "../Landing_Page/Navbar";
+
 import Modal from 'react-modal'; 
 function AddToCart(){
     const [isOpen, setIsOpen] = useState(false);
@@ -107,5 +109,6 @@ function AddToCart(){
            Hi
         </div>
     )
+
 }
 export  {AddToCart}
