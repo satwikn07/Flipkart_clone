@@ -1,5 +1,6 @@
 import { useHistory } from 'react-router';
 import styles  from '../../CSS/AddToCart.module.css' 
+import {Navbar} from "../Landing_Page/Navbar";
 
 function AddToCart(){
 
@@ -9,7 +10,8 @@ function AddToCart(){
         check.push("/checkout");
     }
 
-    return(
+    return(<>
+        <Navbar />
         <div className={styles.box} style={{ backgroundColor: "#f1f3f6"}}>
            <div className={styles.bigcont}>
                <div className={styles.smallone}>
@@ -84,6 +86,8 @@ function AddToCart(){
                    
               </div>
         </div>
+        </>
     )
+
 }
 export  {AddToCart}
