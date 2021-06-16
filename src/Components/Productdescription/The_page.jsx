@@ -7,7 +7,7 @@ export const The_page = ()=>{
         <div >
             <Navbar />
             {/**Bar />*/} {/**To be implemented like last project */}
-            <div style={{display:"grid",gridTemplateColumns:"10vw 40vw 42vw 8vw",gridTemplateRows:"100vh"}}>
+            <div style={{display:"grid",gridTemplateColumns:"5vw 35vw 55vw 5vw",gridTemplateRows:"100vh"}}>
                 <div></div>
                 <Gallery /> {/**Picture of the product*/}
                 <Description />
