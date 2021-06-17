@@ -71,7 +71,7 @@ color:blue;
     width: 150px;
 }
 .incbtn button{
-
+    outline: none;
     background: linear-gradient(#fff,#f9f9f9);
     display: inline-block;
     border: 1px solid #c2c2c2;
