@@ -56,11 +56,14 @@ console.log(remove)
                    <div> 
                <img style={{height:"100px"}} alt="" src="https://rukminim1.flixcart.com/image/224/224/keaaavk0/computer/x/m/y/lenovo-na-laptop-original-imafuzt8r5jqppfn.jpeg?q=90"/>
                    <div className={styles.incbtn}>
+ 
+          
 
                         <button disabled={count==1} onClick={()=>handleInc(-1)} style={{outline:"none"}}>-</button>
                         <div style={{border:"1px solid grey",padding:"5px",paddingLeft:"15px", width:"50px" }}>{count}</div>
                         <button onClick={()=>handleInc(1)} style={{outline:"none"}}>+</button> 
 
+ 
                    </div>
                </div>
                   <div>
@@ -139,9 +142,9 @@ console.log(remove)
                    <div> 
                <img style={{height:"100px"}} alt="" src="https://rukminim1.flixcart.com/image/224/224/keaaavk0/computer/x/m/y/lenovo-na-laptop-original-imafuzt8r5jqppfn.jpeg?q=90"/>
                    <div className={styles.incbtn}>
-                        <button disabled={count==1} onClick={()=>handleInc(-1)}>-</button>
-                        <div style={{border:"1px solid grey",padding:"8px",paddingLeft:"15px", width:"50px", }}>{count}</div>
-                        <button  onClick={()=>handleInc(1)}>+</button> 
+                   <button style={{width:"30px",height:"30px"}} disabled={count==1} onClick={()=>handleInc(-1)}>-</button>
+                        <div style={{marginTop:"2px",width:"50px",height:"25px",border:"1px solid black",textAlign:"center"}}>{count}</div>
+                        <button style={{width:"30px",height:"30px"}}  onClick={()=>handleInc(1)}>+</button>
                    </div>
                </div>
                   <div>
