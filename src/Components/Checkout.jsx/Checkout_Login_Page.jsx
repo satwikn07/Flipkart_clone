@@ -7,14 +7,15 @@ import {Link} from "react-router-dom";
 import { useHistory } from 'react-router';
 import {Prod} from "../AddToCart/Prod";
 import prodstyles  from '../../CSS/AddToCart.module.css' 
+import { DetailsCart } from '../AddToCart/DetailsCart';
 
 const Checkout_Login_Page = () => {
     const history = useHistory();
     document.title=`flipkart.com:secure payment>login>select shipping address`;
     const [userName,setUserName] = useState("");
     const [password,setPassword] = useState("");
-    const [flag,setFlag] = useState(false);
-    const [isAuth,setIsAuth] = useState(false);
+    const [flag,setFlag] = useState(true);
+    const [isAuth,setIsAuth] = useState(true);
     const [delivered,setDelivered] = useState(false);
     const [gotoPayment,setGoToPayment] = useState(false);
     const [upi,setUpi] = useState(false);
@@ -25,6 +26,12 @@ const Checkout_Login_Page = () => {
     const [mNo,setMNo] = useState("");
     const [otp,setOtp] = useState("");
     const [cash,setCash] = useState(false);
+    /// add to cart 
+    const [count,setCount] = useState(1);
+
+    const handleInc =(num)=> {
+        setCount(prev=> prev+num)
+    }
 
     const handleSubmit = (e)=>{
         e.preventDefault();
@@ -267,7 +274,27 @@ const Checkout_Login_Page = () => {
             </div>
             </div>
         </div>
-        <div>Product details from cart section</div>
+        <div>
+            {/* <DetailsCart /> */}
+
+            <div className={prodstyles.products}>
+                   <div> 
+               <img style={{height:"100px"}} alt="" src="https://rukminim1.flixcart.com/image/224/224/keaaavk0/computer/x/m/y/lenovo-na-laptop-original-imafuzt8r5jqppfn.jpeg?q=90"/>
+                   <div className={prodstyles.incbtn}>
+                        <button style={{width:"30px",height:"30px"}} disabled={count==1} onClick={()=>handleInc(-1)}>-</button>
+                        <div style={{marginTop:"2px",width:"50px",height:"25px",border:"1px solid black",textAlign:"center"}}>{count}</div>
+                        <button style={{width:"30px",height:"30px"}}  onClick={()=>handleInc(1)}>+</button> 
+                   </div>
+               </div>
+                <div>
+                      <a   style={{fontSize: "16px", color:"#212121", lineHeight:"1",display:"inline",fontFamily: "Roboto,Arial,sans-serif", fontWeight:"500"}}>Lenovo IdeaPad 3 Core i5 10th Gen - (8 GB/1 TB HDD/Windows 10 Home) 15IIL05 Laptop  (15.6 inch, Platinum Grey, 1.85 kg)</a>
+                     <p style={{display:" block", color: "#878787", fontSize: "14px",  height: "20px"}}>15.6 inch, Platinum Grey, 1.85 kg</p>
+                    <p style={{display:" block", color: "#878787", fontSize: "14px",  height: "20px"}}>Seller:PETILANTE Online  <span><img height="30px" width="100px" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fa_62673a.png"/></span>  </p> 
+                      <div style={{fontSize: "18px", fontWeight: "500", color:" #212121"}}> ₹43990 <span style={{color: "#878787", textDecoration: "line-through",  fontSize:"15px"}}>₹52788</span><span className={styles.offer} >20% Off  11 offers applied</span></div>
+                </div>
+            </div>
+            
+        </div>
         </div>
         </div>
         <div className={`${styles.login} ${styles.divs}`} style={{justifyContent:"center",alignItems:"center"}}>

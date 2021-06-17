@@ -13,10 +13,10 @@ function AddToCart(){
     const [discount, setDiscount]= useState(0)
     const [total, setTotal] = useState(0)
     const [remove, setRemove] = useState(true)
-    const check = useHistory();
+    const history = useHistory();
 console.log(remove)
     const checkout = ()=>{
-        check.push("/checkout");
+        history.push("/checkout");
     }
     function toggleModal() {
         setIsOpen(!isOpen);

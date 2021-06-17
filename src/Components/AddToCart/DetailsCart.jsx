@@ -1,12 +1,23 @@
+import React, { useState } from "react";
 import styles  from '../../CSS/AddToCart.module.css' 
 import Modal from 'react-modal'; 
 function DetailsCart(){
+
+    const [isOpen, setIsOpen] = useState(false);
+    function toggleModal() {
+      setIsOpen(!isOpen);
+    }
+
+    const checkout = ()=>{
+        history.push("/checkout");
+    }
+
     return (
         <div> 
            <div   className={styles.box} style={{ backgroundColor: "#f1f3f6"}}>
            <div className={styles.bigcont}>
            <div className={styles.smallone}>
-                   <div className={styles.item} className={styles.head}>My Cart ({count})</div>
+                   {/* <div className={styles.item} className={styles.head}>My Cart (1)</div>
                    <div>
                        
                    <img style={{marginLeft:"320px"}} src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZWxsaXBzZSBjeD0iOSIgY3k9IjE0LjQ3OCIgZmlsbD0iI0ZGRTExQiIgcng9IjkiIHJ5PSIzLjUyMiIvPjxwYXRoIGZpbGw9IiMyODc0RjAiIGQ9Ik04LjYwOSA3LjAxYy0xLjA4IDAtMS45NTctLjgyNi0xLjk1Ny0xLjg0NSAwLS40ODkuMjA2LS45NTguNTczLTEuMzA0YTIuMDIgMi4wMiAwIDAgMSAxLjM4NC0uNTRjMS4wOCAwIDEuOTU2LjgyNSAxLjk1NiAxLjg0NCAwIC40OS0uMjA2Ljk1OS0uNTczIDEuMzA1cy0uODY0LjU0LTEuMzgzLjU0ek0zLjEzIDUuMTY1YzAgMy44NzQgNS40NzkgOC45MjIgNS40NzkgOC45MjJzNS40NzgtNS4wNDggNS40NzgtOC45MjJDMTQuMDg3IDIuMzEzIDExLjYzNCAwIDguNjA5IDAgNS41ODMgMCAzLjEzIDIuMzEzIDMuMTMgNS4xNjV6Ii8+PC9nPjwvc3ZnPg==" />
@@ -15,7 +26,7 @@ function DetailsCart(){
                    <div style={{fontWeight: "500",color: "#878787"}}>Deliver to</div>
                    <div style={{border:"1px solid grey"}}>
                       <div>Afzal Ahmad, <span className={styles.addrs}>village and pst rasulabad musafirkhana sulatnpur</span></div>
-                   </div>
+                   </div> */}
                </div>
                <hr/>
              
@@ -23,8 +34,8 @@ function DetailsCart(){
                    <div> 
                <img style={{height:"100px"}} alt="" src="https://rukminim1.flixcart.com/image/224/224/keaaavk0/computer/x/m/y/lenovo-na-laptop-original-imafuzt8r5jqppfn.jpeg?q=90"/>
                    <div className={styles.incbtn}>
-                        <button disabled={count==1} onClick={()=>handleInc(-1)}>-</button>
-                        <div style={{border:"1px solid grey",padding:"5px",paddingLeft:"15px", width:"50px", }}>{count}</div>
+                        <button disabled={false} onClick={()=>handleInc(-1)}>-</button>
+                        <div style={{border:"1px solid grey",padding:"5px",paddingLeft:"15px", width:"50px", }}>`count`</div>
                         <button onClick={()=>handleInc(1)}>+</button> 
                    </div>
                </div>
