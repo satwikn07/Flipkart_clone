@@ -12,7 +12,7 @@ export const BoughtTogether = ()=>{
     const items = [
         {
             image:"https://rukminim1.flixcart.com/image/312/312/kbb49zk0/computer/j/3/x/lenovo-na-laptop-original-imafsnkxhmvgrqgu.jpeg?q=70",
-            title:"Lenovo Ideapad S145 Ryzen 5 Quad Core 3500U - (4 GB/1 TB HDD/Wind...",
+            title:"Lenovo IdeaPad 3 Core i5 10th Gen - (8 GB/1 TB HDD/Windows 10 Hom...",
             rating:3.7,
             rating_no:122,
             price:29990,

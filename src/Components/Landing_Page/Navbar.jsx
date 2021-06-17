@@ -2,6 +2,7 @@ import React from 'react'
 import  '../../CSS/Landing_page_css/Navbar.module.css'
 import { Link } from 'react-router-dom'
 import { Redirect, useHistory } from "react-router"
+import styles from '../Productdescription/Navbar.module.css'
 
 export const Navbar =() =>{
   const history = useHistory();
@@ -13,7 +14,7 @@ export const Navbar =() =>{
   //style={{border:"1px solid black"}}
   if(window.location.pathname==="/"){
     return (
-      <div style={{display:"grid", gridTemplateColumns:"13vw 5vw 38vw 13vw 8vw 9vw 6vw 8vw", gridTemplateRows:"8vh", background:"#2874F0",width:"100%"}}>
+      <div  style={{display:"grid", gridTemplateColumns:"13vw 5vw 38vw 13vw 8vw 9vw 6vw 8vw", gridTemplateRows:"8vh", background:"#2874F0",width:"100%"}}>
           <div></div>
           <div style={{lineHeight:"1px",paddingTop:"1.5vh",cursor:"pointer"}} onClick={goToLanding}> <img src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png" alt=""
            style={{width:"100%", height:"22px"}}/>
@@ -48,7 +49,7 @@ export const Navbar =() =>{
       </div>)
   }
   return (
-    <div style={{display:"grid", gridTemplateColumns:"13vw 5vw 38vw 13vw 8vw 9vw 6vw 8vw", gridTemplateRows:"8vh", background:"#2874F0",width:"100%"}}>
+    <div  style={{display:"grid", gridTemplateColumns:"13vw 5vw 38vw 13vw 8vw 9vw 6vw 8vw", gridTemplateRows:"8vh", background:"#2874F0",width:"100%"}}>
         <div></div>
         <div style={{lineHeight:"1px",paddingTop:"1.5vh",cursor:"pointer"}} onClick={goToLanding}> <img src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png" alt=""
          style={{width:"100%", height:"22px"}}/>

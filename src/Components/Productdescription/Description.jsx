@@ -33,7 +33,7 @@ export const Description = ()=>{
     const exchange_offers = [
         {   id:1,
             a:'Buy without exchange',
-            b:'29,990'
+            b:'43,990'
         },
         {
             id:2,
@@ -89,16 +89,16 @@ export const Description = ()=>{
                          <span style={{fontWeight:"400",fontSize:"14px",float:"right",padding:"1vh 2%"}}><i class='fas fa-share'></i><span style={{color:"black"}}> Share </span></span>
                         <span style={{fontWeight:"400",fontSize:"14px",float:"right",padding:"0 2%",width:"8vw"}}><input type="checkbox" style={{margin:"1vh 0.5vw"}}/><span style={{color:"black"}}>Compare</span></span>
                          </div>
-            <span style={{fontSize:"18px",color:'#212121',fontWeight:400,fontFamily:"sans-serif",lineHeight:"25.2px"}}>Lenovo Ideapad S145 Ryzen 3 Dual Core 3200U - (4 GB/1 TB HDD/Windows 10 Home) S145-15API Thin and Light Laptop  (15.6 inch, Grey, 1.85 kg, With MS Office)</span> <br /> {/**Title of product here */}
+            <span style={{fontSize:"18px",color:'#212121',fontWeight:400,fontFamily:"sans-serif",lineHeight:"25.2px"}}>Lenovo IdeaPad 3 Core i5 10th Gen - (8 GB/1 TB HDD/Windows 10 Home) 15IIL05 Laptop  (15.6 inch, Platinum Grey, 1.85 kg)</span> <br /> {/**Title of product here */}
             <span style={{fontFamily:"roboto",fontSize:"14px",padding:"2px 4px 2px 6px",fontWeight:500,backgroundColor:"rgb(56, 142, 60)",color:"rgb(255, 255, 255)"}}>
                 4.5 <span class="fa fa-star" style={{fontSize:"10px"}}></span> {/**Rating of product here */}
             </span>
             <span style={{fontSize:"14px",fontWeight:"500",color:"rgb(135, 135, 135)",margin:"0 1vw"}}>5,077 Ratings & 748 Reviews</span>
             <span><img src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fa_62673a.png" style={{height:21}} alt="" /></span> <br />
-            <span style={{color:"#212121",backgroundColor:'rgba(0, 0, 0, 0)',fontSize:"28px",fontWeight:"500",marginRight:"1vw",fontFamily:"Roboto"}}>₹29,990</span> {/**Computed price after discount will be here  */}
-            <span style={{color:"#878787",backgroundColor:'white',fontSize:"16px",fontWeight:"400",textDecoration:"line-through solid rgb(135, 135, 135)",marginRight:"1vw",fontFamily:"Roboto"}}>₹37,190</span> {/**Original Price  */}
-            <span style={{color:"#388e3c",backgroundColor:'white',fontSize:"16px",fontWeight:"500",textDecoration:"none",marginRight:"1vw",fontFamily:"Roboto"}}>19% off</span> {/**Discount percentage  */} <br />
-            <span style={{color:"#212121",backgroundColor:'white',fontSize:"16px",fontWeight:"400",textDecoration:"none",marginRight:"1vw",fontFamily:"Roboto"}}>Or Pay ₹29,890 + <img src="https://rukminim1.flixcart.com/www/100/100/promos/18/07/2019/4aebbd99-7478-411e-aced-265e7722d18d.png?q=90" alt="" style={{height:"12px"}}/> 100</span>{/**Price - 100 */} <br />
+            <span style={{color:"#212121",backgroundColor:'rgba(0, 0, 0, 0)',fontSize:"28px",fontWeight:"500",marginRight:"1vw",fontFamily:"Roboto"}}>₹43,990</span> {/**Computed price after discount will be here  */}
+            <span style={{color:"#878787",backgroundColor:'white',fontSize:"16px",fontWeight:"400",textDecoration:"line-through solid rgb(135, 135, 135)",marginRight:"1vw",fontFamily:"Roboto"}}>₹63,790</span> {/**Original Price  */}
+            <span style={{color:"#388e3c",backgroundColor:'white',fontSize:"16px",fontWeight:"500",textDecoration:"none",marginRight:"1vw",fontFamily:"Roboto"}}>31% off</span> {/**Discount percentage  */} <br />
+            <span style={{color:"#212121",backgroundColor:'white',fontSize:"16px",fontWeight:"400",textDecoration:"none",marginRight:"1vw",fontFamily:"Roboto"}}>Or Pay ₹43,890 + <img src="https://rukminim1.flixcart.com/www/100/100/promos/18/07/2019/4aebbd99-7478-411e-aced-265e7722d18d.png?q=90" alt="" style={{height:"12px"}}/> 100</span>{/**Price - 100 */} <br />
 
             <span style={{color:"#212121",backgroundColor:'rgba(0, 0, 0, 0)',fontSize:"16px",fontWeight:"500",fontFamily:"Roboto",lineHeight:"22.4px"}}>Available Offers</span> <br />
             {showMore?offers.map(el=><Offers head={el.head} tail={el.tail} body={el.body} />):offers_4.map(el=><Offers head={el.head} tail={el.tail} body={el.body} />)} 
