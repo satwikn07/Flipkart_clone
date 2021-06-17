@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 import { useHistory } from 'react-router';
 import {Prod} from "../AddToCart/Prod";
 import prodstyles  from '../../CSS/AddToCart.module.css' 
-import { DetailsCart } from '../AddToCart/DetailsCart';
+
 
 const Checkout_Login_Page = () => {
     const history = useHistory();
