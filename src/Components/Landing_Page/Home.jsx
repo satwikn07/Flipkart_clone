@@ -25,7 +25,7 @@ const Home = () => {
     margin-top:40px
     `
     return (
-        <div >
+        <div>
                 {/* <Navbar/> */}
                 <Div>
                 <Navbar />

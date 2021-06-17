@@ -1,1 +1,1 @@
-# Flipkart_clone
+# Clone of www.flipkart.com

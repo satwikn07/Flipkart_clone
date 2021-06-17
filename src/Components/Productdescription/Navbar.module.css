@@ -1,0 +1,11 @@
+.navbar {
+    overflow: hidden;
+    top: 0;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+}
+  
+.navbar~div{
+    display: block;
+}
