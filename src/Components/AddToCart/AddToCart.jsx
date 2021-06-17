@@ -48,7 +48,7 @@ function AddToCart(){
                    </div>
                    <div style={{fontWeight: "500",color: "#878787"}}>Deliver to</div>
                    <div style={{border:"1px solid grey"}}>
-                      <div>Afzal Ahmad, <span className={styles.addrs}>village and pst rasulabad musafirkhana sulatnpur</span></div>
+                      <div>Afzal Ahmad, <span className={styles.addrs}>village and pst rasulabad...</span></div>
                    </div>
                </div>
                <hr/>
@@ -121,6 +121,7 @@ function AddToCart(){
                 
             
         <div>
+             <Navbar/>
            <div className={styles.svltr}>
            <div className={styles.item} className={styles.head}>My Cart</div>
            <img   src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" />

@@ -17,8 +17,8 @@ const Checkout_Login_Page = () => {
     document.title=`flipkart.com:secure payment>login>select shipping address`;
     const [userName,setUserName] = useState("");
     const [password,setPassword] = useState("");
-    const [flag,setFlag] = useState(true);
-    const [isAuth,setIsAuth] = useState(true);
+    const [flag,setFlag] = useState(false);
+    const [isAuth,setIsAuth] = useState(false);
     const [delivered,setDelivered] = useState(false);
     const [gotoPayment,setGoToPayment] = useState(false);
     const [upi,setUpi] = useState(false);
@@ -198,9 +198,7 @@ const Checkout_Login_Page = () => {
         </div>
          {/* show this div when loggedin, contains item info in cart at right side */}
         <div className={styles.rightDiv} style={{width:"400px"}}>
-            {/* <div style={{width:"29px",height:"36px"}}>
-                <img width="100%" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/shield_5f9216.png" alt="pic" />
-            </div> */}
+
             <div style={{marginLeft:"40px",fontWeight:"500",lineHeight:"1.8",color:"grey"}}>
             {/* Price details section...shown here */}
             {/* price section */}
