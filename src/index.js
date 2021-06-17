@@ -7,11 +7,7 @@ import { PricecontextProvider } from './context/Pricecontext';
 
 
 ReactDOM.render(
-<<<<<<< HEAD
-  
-=======
   <PricecontextProvider>
->>>>>>> 5490263c91c282a420bc1d758d1cdd3e2f3813b2
   <BrowserRouter>
   <React.StrictMode>
     <App />

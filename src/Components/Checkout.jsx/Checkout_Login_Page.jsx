@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect,useContext } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styles from "./Checkout_login.module.css";
@@ -7,9 +7,12 @@ import {Link} from "react-router-dom";
 import { useHistory } from 'react-router';
 import {Prod} from "../AddToCart/Prod";
 import prodstyles  from '../../CSS/AddToCart.module.css' 
+import { Pricecontext } from '../../context/Pricecontext';
 
 
 const Checkout_Login_Page = () => {
+    const {count,price,discount,total,setCount,setPrice,setDiscount,setTotal } = useContext(Pricecontext)
+
     const history = useHistory();
     document.title=`flipkart.com:secure payment>login>select shipping address`;
     const [userName,setUserName] = useState("");
@@ -27,7 +30,6 @@ const Checkout_Login_Page = () => {
     const [otp,setOtp] = useState("");
     const [cash,setCash] = useState(false);
     /// add to cart 
-    const [count,setCount] = useState(1);
 
     const handleInc =(num)=> {
         setCount(prev=> prev+num)
@@ -203,7 +205,7 @@ const Checkout_Login_Page = () => {
             {/* Price details section...shown here */}
             {/* price section */}
             <div style={{position:"fixed",marginLeft:"320px",top:"80px"}} className={prodstyles.box}>
-            <Prod />
+            <Prod count={count} price={price} total={total} discount={discount} />
             </div>
 
             </div>
