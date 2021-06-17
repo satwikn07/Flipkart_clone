@@ -15,6 +15,7 @@ import { ThirdHeader } from './ThirdHeaderDiv';
 import { TopFaishionDiv } from './TopFaishion';
 
 const Home = () => {
+    
     return (
         <div >
                 {/* <Navbar/> */}
