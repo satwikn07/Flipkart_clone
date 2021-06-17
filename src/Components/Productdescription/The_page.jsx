@@ -4,6 +4,7 @@ import {Gallery} from './Gallery';
 import { Description } from './Description';
 import { Subnavbar } from './Subnavbar';
 export const The_page = ()=>{
+    // console.log(window.location);
     return(
         <div style={{width:"100%"}}>
             <Navbar />
