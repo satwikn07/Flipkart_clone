@@ -3,6 +3,8 @@ import { useHistory } from 'react-router';
 import styles  from '../../CSS/AddToCart.module.css' 
 import {Navbar} from "../Landing_Page/Navbar";
 import { Pricecontext } from '../../context/Pricecontext';
+import styled from 'styled-components';
+import {Link} from "react-router-dom";
 
 import Modal from 'react-modal'; 
 import { Prod } from './Prod';
@@ -32,12 +34,19 @@ function AddToCart(){
 
            setTotal(price)
        },[count,price,discount])
+
+       const Div = styled.div`
+position:fixed;
+top:0px;
+`
         
        return !savelater? 
             (   
           <div> 
-         <Navbar/>
-        <div   className={styles.box} style={{ backgroundColor: "#f1f3f6"}}>
+          <Div>
+          <Navbar />
+          </Div>
+        <div   className={styles.box} style={{ backgroundColor: "#f1f3f6",marginTop:"70px"}}>
            <div className={styles.bigcont}>
            <div className={styles.smallone}>
                    <div className={styles.item} className={styles.head}>My Cart ({count})</div>
@@ -113,6 +122,16 @@ function AddToCart(){
         </div>
              
         </div>
+        <div style={{position:"sticky",bottom:0,display:"flex",justifyContent:"space-around",backgroundColor:"white",
+        alignItems:"center",height:"70px",paddingTop:"20px",paddingBottom:"20px",
+        marginTop:"30px"}}>
+            <div>
+            Policies: <span>Returns Policy |</span> <span>Terms of use |</span> <span>Security | </span><span>Privacy |</span> <span>Infringement </span> © 2007-2021 Flipkart.com
+            </div>
+            <div>
+            Need help? Visit the <Link>Help Center</Link> or <Link>Contact Us</Link>
+            </div>
+        </div>
         </div>
         
             ):(
@@ -178,6 +197,8 @@ function AddToCart(){
                 
          
         </div>
+
+        
         
 
 

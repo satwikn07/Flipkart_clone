@@ -8,6 +8,7 @@ import { useHistory } from 'react-router';
 import {Prod} from "../AddToCart/Prod";
 import prodstyles  from '../../CSS/AddToCart.module.css' 
 import { Pricecontext } from '../../context/Pricecontext';
+import styled from 'styled-components';
 
 
 const Checkout_Login_Page = () => {
@@ -146,13 +147,21 @@ const Checkout_Login_Page = () => {
       setTimeout(()=>{history.push('/')},5000)
 }
 
+const Div = styled.div`
+position:fixed;
+top:0px;
+`
+
     return (
         <div>
+        <Div>
         <Navbar />
+        </Div>
+
         {!isAuth ? <>
             <div className={styles.main}>
-        <div className={styles.outerDiv}>
-            <div className={styles.login}>
+        <div className={styles.outerDiv} style={{marginTop:"50px"}}>
+            <div className={styles.login} >
             <h6><span className={styles.loginSpan}>1</span>LOGIN OR SIGNUP</h6></div>
             <div style={{display:"flex",padding:"10px"}}>
             <div className={styles.formDiv}>
@@ -177,7 +186,7 @@ const Checkout_Login_Page = () => {
             </div>
             </div>
         </div>
-        <div className={styles.rightDiv}>
+        <div className={styles.rightDiv} style={{marginTop:"50px"}}>
             <div style={{width:"29px",height:"36px"}}>
                 <img width="100%" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/shield_5f9216.png" alt="pic" />
             </div>
@@ -190,7 +199,7 @@ const Checkout_Login_Page = () => {
                 
             <div className={styles.main}>
              {/* show this div when loggedin, contains user info  */}
-                 <div style={{width:"59.8%",display:"flex",justifyContent:"space-between"}} className={`${styles.login} ${styles.divs}`}>
+        <div style={{width:"59.8%",display:"flex",justifyContent:"space-between",marginTop:"50px"}} className={`${styles.login} ${styles.divs}`}>
         <div><span className={styles.loginSpan}>1</span>
         LOGIN <i style={{color:"blue",marginLeft:"5px",fontWeight:"500"}} class="fas fa-check fa-1x"></i><br/>
         <span className={styles.userDetails}>Afzal Ahmad 7753816370</span>
@@ -366,7 +375,7 @@ const Checkout_Login_Page = () => {
 
         </div>
 
-        <div style={{display:"flex",justifyContent:"space-around",backgroundColor:"white",
+        <div style={{position:"sticky",bottom:0,display:"flex",justifyContent:"space-around",backgroundColor:"white",
         alignItems:"center",height:"70px",paddingTop:"20px",paddingBottom:"20px",
         marginTop:"20px"}}>
             <div>

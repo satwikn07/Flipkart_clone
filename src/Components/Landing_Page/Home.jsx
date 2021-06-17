@@ -13,14 +13,26 @@ import { Navbar } from './Navbar';
 import { SixthDiv } from './SixthDiv';
 import { ThirdHeader } from './ThirdHeaderDiv';
 import { TopFaishionDiv } from './TopFaishion';
+import styled from "styled-components";
 
 const Home = () => {
-    
+    const Div = styled.div`
+    position:fixed;
+    top:0px;
+    z-index:3;
+    `
+    const First = styled.div`
+    margin-top:40px
+    `
     return (
         <div >
                 {/* <Navbar/> */}
+                <Div>
                 <Navbar />
+                </Div>
+                <First>
                 <FirstHeaderDiv />
+                </First>
                 <CarouselBox/>
                 <ThirdHeader />
                 <FourthDiv />
