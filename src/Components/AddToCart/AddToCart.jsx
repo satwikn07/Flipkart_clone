@@ -3,6 +3,8 @@ import { useHistory } from 'react-router';
 import styles  from '../../CSS/AddToCart.module.css' 
 import {Navbar} from "../Landing_Page/Navbar";
 import { Pricecontext } from '../../context/Pricecontext';
+import styled from 'styled-components';
+import {Link} from "react-router-dom";
 
 import Modal from 'react-modal'; 
 import { Prod } from './Prod';
@@ -10,11 +12,12 @@ function AddToCart(){
     const [isOpen, setIsOpen] = useState(false);
     const [savelater, setSavelater]= useState(false)
     const [remove, setRemove] = useState(true)
+    const history = useHistory();
     const {count,price,discount,total,setCount,setPrice,setDiscount,setTotal } = useContext(Pricecontext) 
-    const check = useHistory();
-console.log(remove)
+
+    console.log(remove)
     const checkout = ()=>{
-        check.push("/checkout");
+        history.push("/checkout");
     }
     function toggleModal() {
         setIsOpen(!isOpen);
@@ -29,14 +32,21 @@ console.log(remove)
            var dis= count * 19800
            setDiscount( dis)
 
-           setTotal(price-discount)
+           setTotal(price)
        },[count,price,discount])
+
+       const Div = styled.div`
+position:fixed;
+top:0px;
+`
         
        return !savelater? 
             (   
           <div> 
-         <Navbar/>
-        <div   className={styles.box} style={{ backgroundColor: "#f1f3f6"}}>
+          <Div>
+          <Navbar />
+          </Div>
+        <div   className={styles.box} style={{ backgroundColor: "#f1f3f6",marginTop:"70px"}}>
            <div className={styles.bigcont}>
            <div className={styles.smallone}>
                    <div className={styles.item} className={styles.head}>My Cart ({count})</div>
@@ -46,7 +56,7 @@ console.log(remove)
                      
                    </div>
                    <div style={{fontWeight: "500",color: "#878787"}}>Deliver to</div>
-                   <div style={{border:"1px solid grey"}}>
+                   <div style={{border:"1px solid grey", height:"40px", paddingTop:"5px", paddingLeft:"8px"}}>
                       <div>Afzal Ahmad, <span className={styles.addrs}>village and pst rasulabad...</span></div>
                    </div>
                </div>
@@ -68,7 +78,7 @@ console.log(remove)
                       <a   style={{fontSize: "16px", color:"#212121", lineHeight:"1",display:"inline",fontFamily: "Roboto,Arial,sans-serif", fontWeight:"500"}}>Lenovo IdeaPad 3 Core i5 10th Gen - (8 GB/1 TB HDD/Windows 10 Home) 15IIL05 Laptop  (15.6 inch, Platinum Grey, 1.85 kg)</a>
                      <p style={{display:" block", color: "#878787", fontSize: "14px",  height: "20px"}}>15.6 inch, Platinum Grey, 1.85 kg</p>
                     <p style={{display:" block", color: "#878787", fontSize: "14px",  height: "20px"}}>Seller:PETILANTE Online  <span><img height="30px" width="100px" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fa_62673a.png"/></span>  </p> 
-                      <div style={{fontSize: "18px", fontWeight: "500", color:" #212121"}}> ₹43990 <span style={{color: "#878787", textDecoration: "line-through",  fontSize:"15px"}}>₹52788</span><span className={styles.offer} >20% Off  11 offers applied</span></div>
+                      <div style={{fontSize: "18px", fontWeight: "500", color:" #212121"}}> ₹43990 <span style={{color: "#878787", textDecoration: "line-through",  fontSize:"15px"}}>₹63,790</span><span className={styles.offer} >20% Off  11 offers applied</span></div>
                      <div className={styles.mbtn}>
                          <span><button onClick={()=> setSavelater(prev=>!prev)} >SAVE FOR LATER</button> <button onClick={toggleModal}>REMOVE</button></span>
                          
@@ -112,6 +122,16 @@ console.log(remove)
         </div>
              
         </div>
+        <div style={{position:"sticky",bottom:0,display:"flex",justifyContent:"space-around",backgroundColor:"white",
+        alignItems:"center",height:"70px",paddingTop:"20px",paddingBottom:"20px",
+        marginTop:"30px"}}>
+            <div>
+            Policies: <span>Returns Policy |</span> <span>Terms of use |</span> <span>Security | </span><span>Privacy |</span> <span>Infringement </span> © 2007-2021 Flipkart.com
+            </div>
+            <div>
+            Need help? Visit the <Link>Help Center</Link> or <Link>Contact Us</Link>
+            </div>
+        </div>
         </div>
         
             ):(
@@ -150,7 +170,7 @@ console.log(remove)
                       <a   style={{fontSize: "16px", color:"#212121", lineHeight:"1",display:"inline",fontFamily: "Roboto,Arial,sans-serif", fontWeight:"500"}}>Lenovo IdeaPad 3 Core i5 10th Gen - (8 GB/1 TB HDD/Windows 10 Home) 15IIL05 Laptop  (15.6 inch, Platinum Grey, 1.85 kg)</a>
                      <p style={{display:" block", color: "#878787", fontSize: "14px",  height: "20px"}}>15.6 inch, Platinum Grey, 1.85 kg</p>
                     <p style={{display:" block", color: "#878787", fontSize: "14px",  height: "20px"}}>Seller:PETILANTE Online  <span><img height="30px" width="100px" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fa_62673a.png"/></span>  </p> 
-                      <div style={{fontSize: "18px", fontWeight: "500", color:" #212121"}}> ₹43990 <span style={{color: "#878787", textDecoration: "line-through",  fontSize:"15px"}}>₹52788</span><span className={styles.offer} >20% Off  11 offers applied</span></div>
+                      <div style={{fontSize: "18px", fontWeight: "500", color:" #212121"}}> ₹43990 <span style={{color: "#878787", textDecoration: "line-through",  fontSize:"15px"}}>₹63,790</span><span className={styles.offer} >20% Off  11 offers applied</span></div>
                      <div className={styles.mbtn}>
                          <span><button onClick={()=> setSavelater(prev=>!prev)} >MOVE TO CART</button> <button onClick={toggleModal}>REMOVE</button></span>
                          
@@ -177,6 +197,8 @@ console.log(remove)
                 
          
         </div>
+
+        
         
 
 
