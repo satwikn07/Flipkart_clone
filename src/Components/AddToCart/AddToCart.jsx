@@ -10,11 +10,12 @@ function AddToCart(){
     const [isOpen, setIsOpen] = useState(false);
     const [savelater, setSavelater]= useState(false)
     const [remove, setRemove] = useState(true)
+    const history = useHistory();
     const {count,price,discount,total,setCount,setPrice,setDiscount,setTotal } = useContext(Pricecontext) 
-    const check = useHistory();
-console.log(remove)
+
+    console.log(remove)
     const checkout = ()=>{
-        check.push("/checkout");
+        history.push("/checkout");
     }
     function toggleModal() {
         setIsOpen(!isOpen);
