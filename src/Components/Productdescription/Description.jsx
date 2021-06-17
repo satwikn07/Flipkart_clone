@@ -2,7 +2,8 @@ import { useState } from "react"
 import { BoughtTogether } from "./BoughtTogether";
 import { Featurecontent } from "./Feature_content"
 import { Offers } from "./Offers";
-import Styles from './Description.module.css'
+import { Exchange } from "./Exchange";
+import { Warranty } from './Warranty';
 export const Description = ()=>{
     const [showMore,setShowMore] = useState(false);
     const offers = [
@@ -28,6 +29,17 @@ export const Description = ()=>{
         {head:"Bank Offer",body:"10% off on SBI Credit Card EMI, up to ₹1500. On orders of ₹5000 and above",tail:"T&C"},
         {head:"Bank Offer",body:"5% Unlimited Cashback on Flipkart Axis Bank Credit Card",tail:"T&C"},
         {head:"",body:"Get a Google Nest Hub (Chalk) at just ₹5,999 on purchase of select TVs, laptops, ACs and mobile",tail:"T&C"},
+    ]
+    const exchange_offers = [
+        {   id:1,
+            a:'Buy without exchange',
+            b:'29,990'
+        },
+        {
+            id:2,
+            a:'Buy with exchange',
+            b:'up to ₹15,650 off'
+        }
     ]   
     const specifications = [
         {
@@ -36,56 +48,69 @@ export const Description = ()=>{
                 "Sales Package":"Laptop, Power Adaptor, User Guide, Warranty Documents",
                 "Model Number":"15IIL05",
                 "Part Number":"81WE0144IN",
-                "Series":"IdeaPad 3",
-
+                "Series":"IdeaPad S145",
+                "Color":"Grey",
+                "Type":"Thin and Liht Laptop",
+                "Suitable For":"Processing and Multitasking",
+                "Battery Backup":"Upto 4 hours",
+                "Power Supply":"65 W AC Adapter",
+                "Battery Cell":"2 cell",
+                "MS Office Provided":"Yes"
             }
         },
         {
             type:"Processor And Memory Features",
             data:{
                
-"Processor":"Brand Intel",
-"Processor Name":"Core i5",
-"Processor Generation":"10th Gen",
-"SSD":"No",
-"RAM":"8GB",
-"RAM Type" :"DDR4 HDD Capacity 1TB",
-"Processor Variant":"1035G7",
-"Chipset":"Intel SoC Platform",
-"Clock Speed":"1.0 GHz with Turbo Boost Upto 3.6 GHz",
-"Memory Slots":"2 Slots",
-"RAM Frequency":"2666 MHz",
-"Cache ":"6 RPM 5400",
-"Graphic":"Processor Intel Integrated UHD",
-"Number of Cores" :"4",
-
+                    "Processor":"Brand Intel",
+                    "Processor Name":"Core i5",
+                    "Processor Generation":"10th Gen",
+                    "SSD":"No",
+                    "RAM":"8GB",
+                    "RAM Type" :"DDR4 HDD Capacity 1TB",
+                    "Processor Variant":"1035G7",
+                    "Chipset":"Intel SoC Platform",
+                    "Clock Speed":"1.0 GHz with Turbo Boost Upto 3.6 GHz",
+                    "Memory Slots":"2 Slots",
+                    "RAM Frequency":"2666 MHz",
+                    "Cache ":"6 RPM 5400",
+                    "Graphic":"Processor Intel Integrated UHD",
+                    "Number of Cores" :"4",
             }
         }
     ]
     return (
-        <div style={{fontSize:"20px",overflow:"auto",background:"white",fontFamily:"Roboto"}}>
-            <span style={{fontSize:"18px",color:'#212121',fontWeight:400,fontFamily:"sans-serif"}}>Product name and description</span> <br /> {/**Title of product here */}
+        <div style={{fontSize:"20px",overflow:"auto",background:"white",fontFamily:"Roboto",paddingLeft:"1vw",width:"100%"}}>
+            <div style={{fontSize:"12px",color:'#878787',fontWeight:400,fontFamily:"sans-serif",lineHeight:"18px"}}>{` Home `}
+                         <i class="fa fa-angle-right" style={{fontWeight:"400",fontSize:"10px"}}></i> {` computers `}
+                         <i class="fa fa-angle-right" style={{fontWeight:"400",fontSize:"10px"}}></i> {` Laptops `}
+                         <i class="fa fa-angle-right" style={{fontWeight:"400",fontSize:"10px"}}></i> {` Lenovo Lapto... `}
+                         <i class="fa fa-angle-right" style={{fontWeight:"400",fontSize:"10px"}}></i> {` Lenovo Ideap... `}
+                         <span style={{fontWeight:"400",fontSize:"14px",float:"right",padding:"1vh 2%"}}><i class='fas fa-share'></i><span style={{color:"black"}}> Share </span></span>
+                        <span style={{fontWeight:"400",fontSize:"14px",float:"right",padding:"0 2%",width:"8vw"}}><input type="checkbox" style={{margin:"1vh 0.5vw"}}/><span style={{color:"black"}}>Compare</span></span>
+                         </div>
+            <span style={{fontSize:"18px",color:'#212121',fontWeight:400,fontFamily:"sans-serif",lineHeight:"25.2px"}}>Lenovo Ideapad S145 Ryzen 3 Dual Core 3200U - (4 GB/1 TB HDD/Windows 10 Home) S145-15API Thin and Light Laptop  (15.6 inch, Grey, 1.85 kg, With MS Office)</span> <br /> {/**Title of product here */}
             <span style={{fontFamily:"roboto",fontSize:"14px",padding:"2px 4px 2px 6px",fontWeight:500,backgroundColor:"rgb(56, 142, 60)",color:"rgb(255, 255, 255)"}}>
-                3.9 <span class="fa fa-star small" ></span> {/**Rating of product here */}
+                4.5 <span class="fa fa-star" style={{fontSize:"10px"}}></span> {/**Rating of product here */}
             </span>
-            <span style={{fontSize:"14px",fontWeight:"500",color:"rgb(135, 135, 135)"}}>5,077 Ratings & 748 Reviews </span> {/**Optional */}
+            <span style={{fontSize:"14px",fontWeight:"500",color:"rgb(135, 135, 135)",margin:"0 1vw"}}>5,077 Ratings & 748 Reviews</span>
             <span><img src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fa_62673a.png" style={{height:21}} alt="" /></span> <br />
             <span style={{color:"#212121",backgroundColor:'rgba(0, 0, 0, 0)',fontSize:"28px",fontWeight:"500",marginRight:"1vw",fontFamily:"Roboto"}}>₹29,990</span> {/**Computed price after discount will be here  */}
             <span style={{color:"#878787",backgroundColor:'white',fontSize:"16px",fontWeight:"400",textDecoration:"line-through solid rgb(135, 135, 135)",marginRight:"1vw",fontFamily:"Roboto"}}>₹37,190</span> {/**Original Price  */}
             <span style={{color:"#388e3c",backgroundColor:'white',fontSize:"16px",fontWeight:"500",textDecoration:"none",marginRight:"1vw",fontFamily:"Roboto"}}>19% off</span> {/**Discount percentage  */} <br />
             <span style={{color:"#212121",backgroundColor:'white',fontSize:"16px",fontWeight:"400",textDecoration:"none",marginRight:"1vw",fontFamily:"Roboto"}}>Or Pay ₹29,890 + <img src="https://rukminim1.flixcart.com/www/100/100/promos/18/07/2019/4aebbd99-7478-411e-aced-265e7722d18d.png?q=90" alt="" style={{height:"12px"}}/> 100</span>{/**Price - 100 */} <br />
 
-            <span style={{color:"#212121",backgroundColor:'rgba(0, 0, 0, 0)',fontSize:"16px",fontWeight:"500",fontFamily:"Roboto"}}>Available Offers</span> <br />
+            <span style={{color:"#212121",backgroundColor:'rgba(0, 0, 0, 0)',fontSize:"16px",fontWeight:"500",fontFamily:"Roboto",lineHeight:"22.4px"}}>Available Offers</span> <br />
             {showMore?offers.map(el=><Offers head={el.head} tail={el.tail} body={el.body} />):offers_4.map(el=><Offers head={el.head} tail={el.tail} body={el.body} />)} 
-            <div style={{color:"#2874f0",fontWeight:"550",fontSize:"16px",cursor:"pointer"}} onClick={()=>{setShowMore(!showMore)}}>{showMore?'View less':'View 13 more offers'}</div><br />
-            <div>
-               <input type="radio" name="exchange" id="" /><span style={{padding:"5%",color:"#212121",fontSize:"16px",fontWeight:"400"}}>Buy without exchange <span style={{padding:"10%",color:"#212121",fontSize:"14px",fontWeight:"500"}}>  ₹29,990</span></span> <br /> {/**The discounted rate here */}
-                <input type="radio" name="exchange" id="" /><span style={{padding:"5%",color:"#212121",fontSize:"16px",fontWeight:"400"}}> Buy with exchange <span style={{padding:"10%",color:"#212121",fontSize:"14px",fontWeight:"500"}}>   up to ₹15,650 off</span></span>
+            <div style={{color:"#2874f0",fontWeight:"500",fontSize:"14px",cursor:"pointer",lineHeight:"20.2px"}} onClick={()=>{setShowMore(!showMore)}}>{showMore?'View less':'View 13 more offers'}</div><br />
+            <div style={{display:"grid", gridTemplateRows:"8vh 8vh", gridTemplateColumns:"30vw",marginBottom:"5vh"}}>
+                {exchange_offers.map(el=><Exchange a={el.a} b={el.b} id={el.id}/>)}
             </div>
             <div>
-                <img src="warranty.png" alt="" style={{width:"100%"}}/>
+                
+                <Warranty />
             </div>
-            <div style={{fontSize:"24px",fontWeight:"500"}}>Specifications</div>
+            <div style={{fontSize:"24px",fontWeight:"500",lineHeight:"27.36px"}}>Specifications</div>
             {specifications.map(el=><Featurecontent info={el}/>)}
            
             <BoughtTogether />

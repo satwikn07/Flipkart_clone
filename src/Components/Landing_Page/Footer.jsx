@@ -13,7 +13,7 @@ Lower,
 const Footer = () => {
 return (
      
-	<Box>
+	<Box style={{width:"100%"}}>
  
 	<Container>
 		<Row>
