@@ -47,7 +47,7 @@ console.log(remove)
                    </div>
                    <div style={{fontWeight: "500",color: "#878787"}}>Deliver to</div>
                    <div style={{border:"1px solid grey"}}>
-                      <div>Afzal Ahmad, <span className={styles.addrs}>village and pst rasulabad musafirkhana sulatnpur</span></div>
+                      <div>Afzal Ahmad, <span className={styles.addrs}>village and pst rasulabad...</span></div>
                    </div>
                </div>
                <hr/>
@@ -57,11 +57,9 @@ console.log(remove)
                <img style={{height:"100px"}} alt="" src="https://rukminim1.flixcart.com/image/224/224/keaaavk0/computer/x/m/y/lenovo-na-laptop-original-imafuzt8r5jqppfn.jpeg?q=90"/>
                    <div className={styles.incbtn}>
  
-          
-
-                        <button disabled={count==1} onClick={()=>handleInc(-1)} style={{outline:"none"}}>-</button>
-                        <div style={{border:"1px solid grey",padding:"5px",paddingLeft:"15px", width:"50px" }}>{count}</div>
-                        <button onClick={()=>handleInc(1)} style={{outline:"none"}}>+</button> 
+                   <button style={{width:"30px",height:"30px"}} disabled={count==1} onClick={()=>handleInc(-1)}>-</button>
+                        <div style={{marginTop:"2px",width:"50px",height:"25px",border:"1px solid black",textAlign:"center"}}>{count}</div>
+                        <button style={{width:"30px",height:"30px"}}  onClick={()=>handleInc(1)}>+</button>
 
  
                    </div>
@@ -120,6 +118,7 @@ console.log(remove)
                 
             
         <div>
+             <Navbar/>
            <div className={styles.svltr}>
            <div className={styles.item} className={styles.head}>My Cart</div>
            <img   src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" />
