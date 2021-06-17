@@ -69,7 +69,7 @@ const Checkout_Login_Page = () => {
     }
 
     const sentOtp =(e)=>{
-        if(mNo.length!==10){
+        if(mNo==" " || mNo.trim().length!==10){
             return  toast.error("mobile no must be of 10 digits !", {
                 position: toast.POSITION.TOP_LEFT
               });
@@ -83,7 +83,9 @@ const Checkout_Login_Page = () => {
 
     const order = (e)=>{
         if(otp.length!==4){
-            return alert("enter otp is wrong");
+            return toast.error("entered otp is wrong", {
+                position: toast.POSITION.TOP_LEFT
+              });
         }
         return  toast.success("Congratulations ! Order placed successfully,", {
             position: toast.POSITION.TOP_CENTER
@@ -172,6 +174,42 @@ const Checkout_Login_Page = () => {
             </div> */}
             <div style={{marginLeft:"40px",fontWeight:"500",lineHeight:"1.8",color:"grey"}}>
             Price details section...shown here
+            {/* price section */}
+
+            {/* <div className={styles.proddet}>
+                  <div>PRICE DETAILS</div>
+                  <hr/>
+                  <div className={styles.prodbox}>
+                      <div>
+                          <div>Price ()  </div>
+                          <div>Discount</div>
+                          <div>Delivery Charges</div>
+                      </div>
+                      <div>
+                          <div>price</div>
+                          <div style={{color:" #388e3c"}} >{`₹${`discount`}`}</div>
+                        <div  style={{color:" #388e3c"}}>FREE</div>  
+                      </div>  
+                  </div>
+                  <div style={ {border: "none",borderTop: "1px dotted grey"}}></div>
+                  <div className={styles.pp}>
+                      <div>Total Amount </div>
+                      <div  style={{ marginLeft:"70px"}} >{`₹ ${`total`}`}</div>
+                  </div>
+                  <div style={ {marginTop:"10px" , border: "none",borderTop: "1px dotted grey"}}></div>
+                  <div className={styles.save}>You will save ₹25,400 on this order</div>
+                
+                  <hr/>
+                  <div className={styles.prodlast}>
+                      <div>Save extra ₹52 using 52 SuperCoins on the next step</div>
+                      <div>Balance: <span><img width="15px" height="15px" src="https://rukminim1.flixcart.com/www/100/100/promos/18/07/2019/4aebbd99-7478-411e-aced-265e7722d18d.png?q=90"/></span>  52</div>
+                  </div>
+                   
+              </div> */}
+
+
+
+
             </div>
         </div>
         </div>
