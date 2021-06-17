@@ -21,10 +21,10 @@ function Prod({count,price, total, discount}){
                   <div style={ {border: "none",borderTop: "1px dotted grey"}}></div>
                   <div className={styles.pp}>
                       <div>Total Amount </div>
-                      <div  style={{ marginLeft:"70px"}} >{`₹ ${total}`}</div>
+                      <div  style={{ marginLeft:"70px"}} >{`₹ ${price}`}</div>
                   </div>
                   <div style={ {marginTop:"10px" , border: "none",borderTop: "1px dotted grey"}}></div>
-                  <div className={styles.save}>You will save ₹25,400 on this order</div>
+                  <div className={styles.save}>{`You will save ₹${discount} on this order`}</div>
                 
                   <hr/>
                   <div className={styles.prodlast}>
