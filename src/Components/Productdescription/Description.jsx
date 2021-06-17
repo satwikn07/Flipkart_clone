@@ -3,6 +3,7 @@ import { BoughtTogether } from "./BoughtTogether";
 import { Featurecontent } from "./Feature_content"
 import { Offers } from "./Offers";
 import { Exchange } from "./Exchange";
+import { Warranty } from './Warranty';
 export const Description = ()=>{
     const [showMore,setShowMore] = useState(false);
     const offers = [
@@ -79,7 +80,7 @@ export const Description = ()=>{
         }
     ]
     return (
-        <div style={{fontSize:"20px",overflow:"auto",background:"white",fontFamily:"Roboto"}}>
+        <div style={{fontSize:"20px",overflow:"auto",background:"white",fontFamily:"Roboto",paddingLeft:"1vw",width:"100%"}}>
             <div style={{fontSize:"12px",color:'#878787',fontWeight:400,fontFamily:"sans-serif",lineHeight:"18px"}}>{` Home `}
                          <i class="fa fa-angle-right" style={{fontWeight:"400",fontSize:"10px"}}></i> {` computers `}
                          <i class="fa fa-angle-right" style={{fontWeight:"400",fontSize:"10px"}}></i> {` Laptops `}
@@ -90,9 +91,9 @@ export const Description = ()=>{
                          </div>
             <span style={{fontSize:"18px",color:'#212121',fontWeight:400,fontFamily:"sans-serif",lineHeight:"25.2px"}}>Lenovo Ideapad S145 Ryzen 3 Dual Core 3200U - (4 GB/1 TB HDD/Windows 10 Home) S145-15API Thin and Light Laptop  (15.6 inch, Grey, 1.85 kg, With MS Office)</span> <br /> {/**Title of product here */}
             <span style={{fontFamily:"roboto",fontSize:"14px",padding:"2px 4px 2px 6px",fontWeight:500,backgroundColor:"rgb(56, 142, 60)",color:"rgb(255, 255, 255)"}}>
-                3.9 <span class="fa fa-star" style={{fontSize:"10px"}} ></span> {/**Rating of product here */}
+                4.5 <span class="fa fa-star" style={{fontSize:"10px"}}></span> {/**Rating of product here */}
             </span>
-            <span style={{fontSize:"14px",fontWeight:"500",color:"rgb(135, 135, 135)",margin:"0 1vw"}}>5,077 Ratings & 748 Reviews</span> {/**Optional */}
+            <span style={{fontSize:"14px",fontWeight:"500",color:"rgb(135, 135, 135)",margin:"0 1vw"}}>5,077 Ratings & 748 Reviews</span>
             <span><img src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fa_62673a.png" style={{height:21}} alt="" /></span> <br />
             <span style={{color:"#212121",backgroundColor:'rgba(0, 0, 0, 0)',fontSize:"28px",fontWeight:"500",marginRight:"1vw",fontFamily:"Roboto"}}>₹29,990</span> {/**Computed price after discount will be here  */}
             <span style={{color:"#878787",backgroundColor:'white',fontSize:"16px",fontWeight:"400",textDecoration:"line-through solid rgb(135, 135, 135)",marginRight:"1vw",fontFamily:"Roboto"}}>₹37,190</span> {/**Original Price  */}
@@ -102,11 +103,12 @@ export const Description = ()=>{
             <span style={{color:"#212121",backgroundColor:'rgba(0, 0, 0, 0)',fontSize:"16px",fontWeight:"500",fontFamily:"Roboto",lineHeight:"22.4px"}}>Available Offers</span> <br />
             {showMore?offers.map(el=><Offers head={el.head} tail={el.tail} body={el.body} />):offers_4.map(el=><Offers head={el.head} tail={el.tail} body={el.body} />)} 
             <div style={{color:"#2874f0",fontWeight:"500",fontSize:"14px",cursor:"pointer",lineHeight:"20.2px"}} onClick={()=>{setShowMore(!showMore)}}>{showMore?'View less':'View 13 more offers'}</div><br />
-            <div style={{display:"grid", gridTemplateRows:"8vh 8vh", gridTemplateColumns:"30vw"}}>
+            <div style={{display:"grid", gridTemplateRows:"8vh 8vh", gridTemplateColumns:"30vw",marginBottom:"5vh"}}>
                 {exchange_offers.map(el=><Exchange a={el.a} b={el.b} id={el.id}/>)}
             </div>
             <div>
-                <img src="warranty.png" alt="" style={{width:"100%"}}/>
+                
+                <Warranty />
             </div>
             <div style={{fontSize:"24px",fontWeight:"500",lineHeight:"27.36px"}}>Specifications</div>
             {specifications.map(el=><Featurecontent info={el}/>)}

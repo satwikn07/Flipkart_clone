@@ -2,16 +2,18 @@ import {Navbar} from '../Landing_Page/Navbar';
 import FooterPage from '../Landing_Page/Footer';
 import {Gallery} from './Gallery';
 import { Description } from './Description';
+import { Subnavbar } from './Subnavbar';
 export const The_page = ()=>{
     return(
-        <div >
+        <div style={{width:"100%"}}>
             <Navbar />
+            <Subnavbar />
             {/**Bar />*/} {/**To be implemented like last project */}
-            <div style={{display:"grid",gridTemplateColumns:"5vw 35vw 55vw 5vw",gridTemplateRows:"100vh"}}>
-                <div></div>
+            <div style={{display:"grid",gridTemplateColumns:"45vw 55vw",gridTemplateRows:"100vh"}}>
+                
                 <Gallery /> {/**Picture of the product*/}
                 <Description />
-                <div></div> {/**Scroll Overflow */}
+                 {/**Scroll Overflow */}
             </div>
             <FooterPage />
         </div>
