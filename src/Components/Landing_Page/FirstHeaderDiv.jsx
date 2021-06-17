@@ -4,7 +4,7 @@ import styles from "../../CSS/Landing_page_css/FirstHeaderDiv.module.css";
 
 function FirstHeaderDiv(){
 
-    return <><div className={styles.linkdiv}>
+    return <div><div className={styles.linkdiv}>
         
               <div className={styles.link} >
               <div>
@@ -88,7 +88,7 @@ function FirstHeaderDiv(){
               </div>
             
         </div>
-</>
+</div>
 }
 
 export {FirstHeaderDiv};
