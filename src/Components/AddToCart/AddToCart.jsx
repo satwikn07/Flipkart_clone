@@ -46,7 +46,7 @@ console.log(remove)
                      
                    </div>
                    <div style={{fontWeight: "500",color: "#878787"}}>Deliver to</div>
-                   <div style={{border:"1px solid grey", height:"40px", paddingTop:"3px"}}>
+                   <div style={{border:"1px solid grey", height:"40px", paddingTop:"5px", paddingLeft:"8px"}}>
                       <div>Afzal Ahmad, <span className={styles.addrs}>village and pst rasulabad...</span></div>
                    </div>
                </div>
