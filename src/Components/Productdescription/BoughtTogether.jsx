@@ -15,7 +15,7 @@ export const BoughtTogether = ()=>{
             title:"Lenovo IdeaPad 3 Core i5 10th Gen - (8 GB/1 TB HDD/Windows 10 Hom...",
             rating:3.7,
             rating_no:122,
-            price:29990,
+            price:43990,
             type:"main"
         },
         //            image:"https://rukminim1.flixcart.com/image/312/312/kgsb1jk0/keyboard/laptop-keyboard/2/9/r/lenovo-kb-mice-bo-wireless-combo-100-eng-original-imafwy3vpd7gfpxg.jpeg?q=70",
