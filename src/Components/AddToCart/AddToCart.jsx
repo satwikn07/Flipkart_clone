@@ -29,7 +29,7 @@ console.log(remove)
            var dis= count * 19800
            setDiscount( dis)
 
-           setTotal(price-discount)
+           setTotal(price)
        },[count,price,discount])
         
        return !savelater? 
@@ -46,7 +46,7 @@ console.log(remove)
                      
                    </div>
                    <div style={{fontWeight: "500",color: "#878787"}}>Deliver to</div>
-                   <div style={{border:"1px solid grey"}}>
+                   <div style={{border:"1px solid grey", height:"40px", paddingTop:"5px", paddingLeft:"8px"}}>
                       <div>Afzal Ahmad, <span className={styles.addrs}>village and pst rasulabad...</span></div>
                    </div>
                </div>
@@ -68,7 +68,7 @@ console.log(remove)
                       <a   style={{fontSize: "16px", color:"#212121", lineHeight:"1",display:"inline",fontFamily: "Roboto,Arial,sans-serif", fontWeight:"500"}}>Lenovo IdeaPad 3 Core i5 10th Gen - (8 GB/1 TB HDD/Windows 10 Home) 15IIL05 Laptop  (15.6 inch, Platinum Grey, 1.85 kg)</a>
                      <p style={{display:" block", color: "#878787", fontSize: "14px",  height: "20px"}}>15.6 inch, Platinum Grey, 1.85 kg</p>
                     <p style={{display:" block", color: "#878787", fontSize: "14px",  height: "20px"}}>Seller:PETILANTE Online  <span><img height="30px" width="100px" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fa_62673a.png"/></span>  </p> 
-                      <div style={{fontSize: "18px", fontWeight: "500", color:" #212121"}}> ₹43990 <span style={{color: "#878787", textDecoration: "line-through",  fontSize:"15px"}}>₹52788</span><span className={styles.offer} >20% Off  11 offers applied</span></div>
+                      <div style={{fontSize: "18px", fontWeight: "500", color:" #212121"}}> ₹43990 <span style={{color: "#878787", textDecoration: "line-through",  fontSize:"15px"}}>₹63,790</span><span className={styles.offer} >20% Off  11 offers applied</span></div>
                      <div className={styles.mbtn}>
                          <span><button onClick={()=> setSavelater(prev=>!prev)} >SAVE FOR LATER</button> <button onClick={toggleModal}>REMOVE</button></span>
                          
@@ -150,7 +150,7 @@ console.log(remove)
                       <a   style={{fontSize: "16px", color:"#212121", lineHeight:"1",display:"inline",fontFamily: "Roboto,Arial,sans-serif", fontWeight:"500"}}>Lenovo IdeaPad 3 Core i5 10th Gen - (8 GB/1 TB HDD/Windows 10 Home) 15IIL05 Laptop  (15.6 inch, Platinum Grey, 1.85 kg)</a>
                      <p style={{display:" block", color: "#878787", fontSize: "14px",  height: "20px"}}>15.6 inch, Platinum Grey, 1.85 kg</p>
                     <p style={{display:" block", color: "#878787", fontSize: "14px",  height: "20px"}}>Seller:PETILANTE Online  <span><img height="30px" width="100px" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fa_62673a.png"/></span>  </p> 
-                      <div style={{fontSize: "18px", fontWeight: "500", color:" #212121"}}> ₹43990 <span style={{color: "#878787", textDecoration: "line-through",  fontSize:"15px"}}>₹52788</span><span className={styles.offer} >20% Off  11 offers applied</span></div>
+                      <div style={{fontSize: "18px", fontWeight: "500", color:" #212121"}}> ₹43990 <span style={{color: "#878787", textDecoration: "line-through",  fontSize:"15px"}}>₹63,790</span><span className={styles.offer} >20% Off  11 offers applied</span></div>
                      <div className={styles.mbtn}>
                          <span><button onClick={()=> setSavelater(prev=>!prev)} >MOVE TO CART</button> <button onClick={toggleModal}>REMOVE</button></span>
                          
