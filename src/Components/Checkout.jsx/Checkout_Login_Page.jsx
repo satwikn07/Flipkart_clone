@@ -5,6 +5,8 @@ import styles from "./Checkout_login.module.css";
 import {Navbar} from "../Landing_Page/Navbar";
 import {Link} from "react-router-dom";
 import { useHistory } from 'react-router';
+import {Prod} from "../AddToCart/Prod";
+import prodstyles  from '../../CSS/AddToCart.module.css' 
 
 const Checkout_Login_Page = () => {
     const history = useHistory();
@@ -70,6 +72,7 @@ const Checkout_Login_Page = () => {
     }
 
     const sentOtp =(e)=>{
+        setPayNow(true);
         if(mNo==" " || mNo.trim().length!==10){
             return  toast.error("mobile no must be of 10 digits !", {
                 position: toast.POSITION.TOP_LEFT
@@ -99,6 +102,16 @@ const Checkout_Login_Page = () => {
         // alert("Order placed successfully");
     }
 
+    const orderByUpi = (e)=>{
+            
+              toast.success("Congratulations ! Order placed successfully,", {
+                position: toast.POSITION.TOP_CENTER
+              })
+            setTimeout(()=>{history.push('/')},5000)
+    
+        // alert("Order placed successfully");
+    }
+
     const selectWallet =(e)=>{
         setWalletSelect(true);
         setUpiSelect(false);
@@ -115,12 +128,13 @@ const Checkout_Login_Page = () => {
         setUpiSelect(false);
         setCash(true);
     }
-    const orderbycash = (e)=>{
-        toast.success("Congratulations ! Order placed successfully", {
-            position: toast.POSITION.TOP_CENTER
-          });
-        // alert("Order placed successfully");
-    }
+    const orderByCash = (e)=>{
+            
+        toast.success("Congratulations ! Order placed successfully,", {
+          position: toast.POSITION.TOP_CENTER
+        })
+      setTimeout(()=>{history.push('/')},5000)
+}
 
     return (
         <div>
@@ -179,42 +193,11 @@ const Checkout_Login_Page = () => {
                 <img width="100%" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/shield_5f9216.png" alt="pic" />
             </div> */}
             <div style={{marginLeft:"40px",fontWeight:"500",lineHeight:"1.8",color:"grey"}}>
-            Price details section...shown here
+            {/* Price details section...shown here */}
             {/* price section */}
-
-            {/* <div className={styles.proddet}>
-                  <div>PRICE DETAILS</div>
-                  <hr/>
-                  <div className={styles.prodbox}>
-                      <div>
-                          <div>Price ()  </div>
-                          <div>Discount</div>
-                          <div>Delivery Charges</div>
-                      </div>
-                      <div>
-                          <div>price</div>
-                          <div style={{color:" #388e3c"}} >{`₹${`discount`}`}</div>
-                        <div  style={{color:" #388e3c"}}>FREE</div>  
-                      </div>  
-                  </div>
-                  <div style={ {border: "none",borderTop: "1px dotted grey"}}></div>
-                  <div className={styles.pp}>
-                      <div>Total Amount </div>
-                      <div  style={{ marginLeft:"70px"}} >{`₹ ${`total`}`}</div>
-                  </div>
-                  <div style={ {marginTop:"10px" , border: "none",borderTop: "1px dotted grey"}}></div>
-                  <div className={styles.save}>You will save ₹25,400 on this order</div>
-                
-                  <hr/>
-                  <div className={styles.prodlast}>
-                      <div>Save extra ₹52 using 52 SuperCoins on the next step</div>
-                      <div>Balance: <span><img width="15px" height="15px" src="https://rukminim1.flixcart.com/www/100/100/promos/18/07/2019/4aebbd99-7478-411e-aced-265e7722d18d.png?q=90"/></span>  52</div>
-                  </div>
-                   
-              </div> */}
-
-
-
+            <div style={{position:"fixed",marginLeft:"320px",top:"80px"}} className={prodstyles.box}>
+            <Prod />
+            </div>
 
             </div>
         </div>
@@ -325,7 +308,7 @@ const Checkout_Login_Page = () => {
             <button onClick={verify} style={{border:"none",outline:"none",cursor:"pointer",marginRight:"5px"}}>verify</button>
             </span>
 
-            <button disabled={payNow} style={{padding:"10px 20px",color:"white",backgroundColor:"grey",border:"none"}}>Pay Rs- 42950</button>
+            <button onClick={orderByUpi} style={{padding:"10px 20px",color:"white",backgroundColor:"grey",border:"none"}}>Pay Rs- 42950</button>
 
             </>}<br/>
 
@@ -336,14 +319,14 @@ const Checkout_Login_Page = () => {
             <button onClick={sentOtp} style={{border:"none",outline:"none",cursor:"pointer",marginRight:"5px"}}>{!otpSent?"send otp":"otp sent"}</button></span>
             {otpSent && <input style={{border:"1px solid black",outline:"none",marginRight:"5px",padding:"10px"}} type="text" placeholder="enter otp" onChange={storeOtp} />
             }
-            <button onClick={order} disabled={payNow} style={{padding:"10px 20px",color:"white",backgroundColor:"grey",border:"none"}}>Pay Rs- 42950</button>
+            <button onClick={order} disabled={!payNow} style={{padding:"10px 20px",color:"white",backgroundColor:"grey",border:"none"}}>Pay Rs- 42950</button>
             {/* <ToastContainer /> */}
             <br/>
             <span style={{marginLeft:"38px",marginTop:"60px"}}>Phonepe is coming soon</span><br/>
             </>}
             <input onClick={cod} name="radio" style={{marginLeft:"5px",marginTop:"28px"}} type="radio" /><span style={{marginLeft:"20px",color:"black"}}>Cash On Delivery</span>
             {
-                cash && <button onClick={orderbycash} style={{padding:"5px 10px",marginLeft:"50px",color:"white",backgroundColor:"grey",border:"none"}}>Order</button>
+                cash && <button onClick={orderByCash} style={{padding:"5px 10px",marginLeft:"50px",color:"white",backgroundColor:"grey",border:"none"}}>Order</button>
             }
             <ToastContainer />
         </ul>
