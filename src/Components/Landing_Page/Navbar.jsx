@@ -11,7 +11,7 @@ export const Navbar =() =>{
   //<i class="fa fa-search" ></i>
   //style={{border:"1px solid black"}}
   return (
-    <div style={{display:"grid", gridTemplateColumns:"13vw 5vw 38vw 13vw 8vw 9vw 6vw 8vw", gridTemplateRows:"8vh", background:"#2874F0"}}>
+    <div style={{display:"grid", gridTemplateColumns:"13vw 5vw 38vw 13vw 8vw 9vw 6vw 8vw", gridTemplateRows:"8vh", background:"#2874F0",width:"100%"}}>
         <div></div>
         <div style={{lineHeight:"1px",paddingTop:"1.5vh",cursor:"pointer"}} onClick={goToLanding}> <img src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png" alt=""
          style={{width:"100%", height:"22px"}}/>
@@ -24,8 +24,8 @@ export const Navbar =() =>{
             {/* <button style={{background:"white", color:"#2874F0", border:"none",height:"4.95vh",outline:"none"}}><i class="fa fa-search"></i></button> */}
           <div className="input-icons" style={{background:"white"}}>
             
-            <input style={{border:"none",height:"4.9vh", outline:"none", width:"95%",fontSize:"14px",fontFamily:"sans-serif",fontWeight:"400"}} placeholder={'   Search for products, brands and more'} className={"input-field"} type="text" />
-            <i  class="fa fa-search" style={{fontSize:"18px",color:"#2874F0"}}></i>
+            <input style={{border:"none",height:"4.5vh", outline:"none", width:"95%",fontSize:"14px",fontFamily:"sans-serif",fontWeight:"400"}} placeholder={'   Search for products, brands and more'} className={"input-field"} type="text" />
+            <i  class="fa fa-search" style={{fontSize:"18px",color:"#2874F0",marginTop:"1.4vh"}}></i>
          
           </div>
         </div>
@@ -42,7 +42,7 @@ export const Navbar =() =>{
           {`  Cart`}</button>
 
         </div>
-        <div  ></div>
+        <div></div>
     </div>
   )
 }

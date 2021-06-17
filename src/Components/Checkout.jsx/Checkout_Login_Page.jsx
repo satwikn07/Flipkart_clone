@@ -4,12 +4,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import styles from "./Checkout_login.module.css";
 import {Navbar} from "../Landing_Page/Navbar";
 import {Link} from "react-router-dom";
-import {useHistory} from "react-router-dom";
+import { useHistory } from 'react-router';
 
 const Checkout_Login_Page = () => {
-
     const history = useHistory();
-
     document.title=`flipkart.com:secure payment>login>select shipping address`;
     const [userName,setUserName] = useState("");
     const [password,setPassword] = useState("");
@@ -90,11 +88,15 @@ const Checkout_Login_Page = () => {
                 position: toast.POSITION.TOP_LEFT
               });
         }
-          toast.success("Congratulations ! Order placed successfully,", {
-            position: toast.POSITION.TOP_CENTER
-          });
-
-          // alert("Order placed successfully");
+        else{
+            
+              toast.success("Congratulations ! Order placed successfully,", {
+                position: toast.POSITION.TOP_CENTER
+              })
+            setTimeout(()=>{history.push('/')},5000)
+        }
+    
+        // alert("Order placed successfully");
     }
 
     const selectWallet =(e)=>{
