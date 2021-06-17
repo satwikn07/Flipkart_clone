@@ -29,6 +29,7 @@ const Checkout_Login_Page = () => {
     const [mNo,setMNo] = useState("");
     const [otp,setOtp] = useState("");
     const [cash,setCash] = useState(false);
+    const [go,setGo] = useState(false);
     /// add to cart 
 
     const handleInc =(num)=> {
@@ -224,11 +225,11 @@ const Checkout_Login_Page = () => {
         <div style={{width:"90%",padding:"10px",paddingLeft:"35px"}}>
         
         <div style={{display:"flex",marginTop:"10px"}}>
-            <div><input type="radio" name="radio" value="hello" /></div>
+            <div><input onClick={e=>setGo(true)} type="radio" name="radio" value="hello" /></div>
             <div className={styles.addressLabel} ><span style={{fontWeight:"500",marginBottom:"20px"}}>Afzal Ahmad, 7753816370</span><br/>
             Address village and pst rasulabad musafirkhana sulatnpur</div>
         </div>
-        <button onClick={deliver} type="submit" style={{width:"200px",marginLeft:"25px",marginTop:"10px",padding: "15px 10px"}}>DELIVER HERE</button>     
+        <button onClick={deliver} disabled={!go} type="submit" style={{width:"200px",marginLeft:"25px",marginTop:"10px",padding: "15px 10px"}}>DELIVER HERE</button>     
         </div>
         </div></>:<>
         {/* delivery div after clicking deliver here button */}
@@ -325,7 +326,7 @@ const Checkout_Login_Page = () => {
         {/* after order */}
         {/* payment options */}
         {gotoPayment && <> 
-        <div style={{backgroundColor:"blue",color:"white"}} className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>4</span>PAYMENT OPTIONS</div>
+        <div style={{backgroundColor:"#2874f0",color:"white"}} className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>4</span>PAYMENT OPTIONS</div>
         <div style={{marginTop:"0px"}} className={`${styles.divs}`}>
         <div style={{display:"flex",marginTop:"10px"}}>
         <ul style={{marginTop:"15px"}}>
@@ -344,7 +345,7 @@ const Checkout_Login_Page = () => {
             <span style={{marginLeft:"38px",marginTop:"30px"}}>
             <input onClick={e=>setUpi(true)} onChange={storeNo} style={{border:"1px solid black",outline:"none",marginRight:"5px",padding:"10px"}} type="text" placeholder="paytm no" />
             <button onClick={sentOtp} style={{border:"none",outline:"none",cursor:"pointer",marginRight:"5px"}}>{!otpSent?"send otp":"otp sent"}</button></span>
-            {otpSent && <input style={{border:"1px solid black",outline:"none",marginRight:"5px",padding:"10px"}} type="text" placeholder="enter otp" onChange={storeOtp} />
+            {otpSent && <input style={{border:"1px solid black",outline:"none",marginRight:"5px",padding:"10px",width:"100px"}} type="text" placeholder="enter otp" onChange={storeOtp} />
             }
             <button onClick={order} disabled={!payNow} style={{padding:"10px 20px",color:"white",backgroundColor:"grey",border:"none"}}>Pay Rs- 42950</button>
             {/* <ToastContainer /> */}
