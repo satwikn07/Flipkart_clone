@@ -1,17 +1,28 @@
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import styles from "./Checkout_login.module.css";
 import {Navbar} from "../Landing_Page/Navbar";
+import {Link} from "react-router-dom";
+import { useHistory } from 'react-router';
 
 const Checkout_Login_Page = () => {
-
+    const history = useHistory();
     document.title=`flipkart.com:secure payment>login>select shipping address`;
     const [userName,setUserName] = useState("");
     const [password,setPassword] = useState("");
     const [flag,setFlag] = useState(false);
     const [isAuth,setIsAuth] = useState(false);
     const [delivered,setDelivered] = useState(false);
-    const [isAddressSelected,setIsAddressSelected] = useState(false);
-    const [gotoPayment,setGoToPayment] = useState(false)
+    const [gotoPayment,setGoToPayment] = useState(false);
+    const [upi,setUpi] = useState(false);
+    const [upiSelect,setUpiSelect] = useState(false);
+    const [payNow,setPayNow] = useState(false);
+    const [walletSelect,setWalletSelect] = useState(false);
+    const [otpSent,setSentOtp] = useState(false);
+    const [mNo,setMNo] = useState("");
+    const [otp,setOtp] = useState("");
+    const [cash,setCash] = useState(false);
 
     const handleSubmit = (e)=>{
         e.preventDefault();
@@ -19,13 +30,19 @@ const Checkout_Login_Page = () => {
             return setFlag(true);
         }else{
             if(!flag){
-                return alert("email/mobile no missing")
+                return  toast.error("Email/Mobile no is missing", {
+                    position: toast.POSITION.TOP_LEFT
+                  });
             }
         }
         if(userName && userName.trim()!="" && password && password.trim()!=""){
-             alert("success")
+            toast.success("Success !", {
+                position: toast.POSITION.TOP_CENTER
+              });
         }else{
-            return alert("email/password not ok")
+            return toast.error("Email/Mobile no is missing", {
+                position: toast.POSITION.TOP_LEFT
+              });
         }
         setIsAuth(true)
     }
@@ -37,6 +54,72 @@ const Checkout_Login_Page = () => {
     const toPayment =()=>{
 
         setGoToPayment(true);
+    }
+
+    const verify =(e)=>{
+        toast.success("Verified !", {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose:1500
+          });
+        // alert("verified");
+        setPayNow(true);
+    }
+
+    const storeNo = (e)=>{
+        setMNo(e.target.value);
+    }
+
+    const sentOtp =(e)=>{
+        if(mNo==" " || mNo.trim().length!==10){
+            return  toast.error("mobile no must be of 10 digits !", {
+                position: toast.POSITION.TOP_LEFT
+              });
+        }
+        setSentOtp(true);
+    }
+
+    const storeOtp =(e)=>{
+        setOtp(e.target.value);
+    }
+
+    const order = (e)=>{
+        if(otp.length!==4){
+            return toast.error("entered otp is wrong", {
+                position: toast.POSITION.TOP_LEFT
+              });
+        }
+        else{
+            
+              toast.success("Congratulations ! Order placed successfully,", {
+                position: toast.POSITION.TOP_CENTER
+              })
+            setTimeout(()=>{history.push('/')},5000)
+        }
+    
+        // alert("Order placed successfully");
+    }
+
+    const selectWallet =(e)=>{
+        setWalletSelect(true);
+        setUpiSelect(false);
+        setCash(false);
+    }
+
+    const selectedUpi = (e)=>{
+        setUpiSelect(true);
+        setWalletSelect(false);
+        setCash(false);
+    }
+    const cod = (e)=>{
+        setWalletSelect(false);
+        setUpiSelect(false);
+        setCash(true);
+    }
+    const orderbycash = (e)=>{
+        toast.success("Congratulations ! Order placed successfully", {
+            position: toast.POSITION.TOP_CENTER
+          });
+        // alert("Order placed successfully");
     }
 
     return (
@@ -57,6 +140,7 @@ const Checkout_Login_Page = () => {
                 <p className={styles.para}>By continuing,you agree to Flipkart's <a href="#">Terms of Use</a> and <br/>
                 <a href="#">Privacy Policy</a>. </p>
                 <button type="submit">CONTINUE</button>
+                <ToastContainer autoClose={3000} />
             </form>
             </div>
             <div style={{padding:"25px",marginLeft:"60px"}}>
@@ -96,6 +180,42 @@ const Checkout_Login_Page = () => {
             </div> */}
             <div style={{marginLeft:"40px",fontWeight:"500",lineHeight:"1.8",color:"grey"}}>
             Price details section...shown here
+            {/* price section */}
+
+            {/* <div className={styles.proddet}>
+                  <div>PRICE DETAILS</div>
+                  <hr/>
+                  <div className={styles.prodbox}>
+                      <div>
+                          <div>Price ()  </div>
+                          <div>Discount</div>
+                          <div>Delivery Charges</div>
+                      </div>
+                      <div>
+                          <div>price</div>
+                          <div style={{color:" #388e3c"}} >{`₹${`discount`}`}</div>
+                        <div  style={{color:" #388e3c"}}>FREE</div>  
+                      </div>  
+                  </div>
+                  <div style={ {border: "none",borderTop: "1px dotted grey"}}></div>
+                  <div className={styles.pp}>
+                      <div>Total Amount </div>
+                      <div  style={{ marginLeft:"70px"}} >{`₹ ${`total`}`}</div>
+                  </div>
+                  <div style={ {marginTop:"10px" , border: "none",borderTop: "1px dotted grey"}}></div>
+                  <div className={styles.save}>You will save ₹25,400 on this order</div>
+                
+                  <hr/>
+                  <div className={styles.prodlast}>
+                      <div>Save extra ₹52 using 52 SuperCoins on the next step</div>
+                      <div>Balance: <span><img width="15px" height="15px" src="https://rukminim1.flixcart.com/www/100/100/promos/18/07/2019/4aebbd99-7478-411e-aced-265e7722d18d.png?q=90"/></span>  52</div>
+                  </div>
+                   
+              </div> */}
+
+
+
+
             </div>
         </div>
         </div>
@@ -110,7 +230,7 @@ const Checkout_Login_Page = () => {
         DELIVERY ADDRESS
         </div>
         </div> 
-        <div className={`${styles.divs} ${styles.loginSpan}`} style={{width:"92.3%",marginTop:0,color:"black"}}>        
+        <div className={`${styles.divs} ${styles.loginSpan}`} style={{width:"92.3%",marginRight:"-130px",marginTop:0,color:"black"}}>        
         <div style={{width:"90%",padding:"10px",paddingLeft:"35px"}}>
         
         <div style={{display:"flex",marginTop:"10px"}}>
@@ -144,7 +264,7 @@ const Checkout_Login_Page = () => {
         {!delivered ? <div className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>3</span>ORDER SUMMARY</div>:<>
         {/* after delivery address selected */}
         {!gotoPayment && <>
-        <div style={{backgroundColor:"#2874f0",color:"white"}} className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>3</span>ORDER SUMMARY</div>
+        <div style={{backgroundColor:"#2874f0",color:"white",width:"92.3%"}} className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>3</span>ORDER SUMMARY</div>
         <div className={`${styles.divs} ${styles.loginSpan}`} style={{width:"92.3%",marginTop:0,color:"black"}}>        
         <div style={{width:"90%",padding:"10px",paddingLeft:"35px"}}>
         
@@ -189,14 +309,62 @@ const Checkout_Login_Page = () => {
         </div>}
 
         {/* before order */}
+        {!gotoPayment &&
         <div className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>4</span>PAYMENT OPTIONS</div>
+        } 
         {/* after order */}
-        <div className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>4</span>PAYMENT OPTIONS</div>
+        {/* payment options */}
+        {gotoPayment && <> 
+        <div style={{backgroundColor:"blue",color:"white"}} className={`${styles.login} ${styles.divs}`}><span className={styles.loginSpan}>4</span>PAYMENT OPTIONS</div>
+        <div style={{marginTop:"0px"}} className={`${styles.divs}`}>
+        <div style={{display:"flex",marginTop:"10px"}}>
+        <ul style={{marginTop:"15px"}}>
+            <input onClick={selectedUpi} name="radio" style={{marginLeft:"5px"}} type="radio" /><span style={{marginLeft:"20px",color:"black"}}>UPI</span><br/>
+            {upiSelect && <> <span style={{marginLeft:"38px",marginTop:"30px",color:"black"}}>Your UPI ID-</span>
+            <span style={{marginLeft:"38px",marginTop:"30px"}}><input onClick={e=>setUpi(true)} style={{border:"1px solid black",outline:"none",marginRight:"5px",padding:"10px"}} type="text" placeholder="enter upi id" />
+            <button onClick={verify} style={{border:"none",outline:"none",cursor:"pointer",marginRight:"5px"}}>verify</button>
+            </span>
 
+            <button disabled={payNow} style={{padding:"10px 20px",color:"white",backgroundColor:"grey",border:"none"}}>Pay Rs- 42950</button>
+
+            </>}<br/>
+
+            <input onClick={selectWallet} name="radio" style={{marginLeft:"5px"}} type="radio" /><span style={{marginLeft:"20px",color:"black"}}>Wallets</span><br/>
+            {walletSelect && <> <span style={{marginLeft:"38px",marginTop:"30px",color:"black"}}>Paytm No-</span>
+            <span style={{marginLeft:"38px",marginTop:"30px"}}>
+            <input onClick={e=>setUpi(true)} onChange={storeNo} style={{border:"1px solid black",outline:"none",marginRight:"5px",padding:"10px"}} type="text" placeholder="paytm no" />
+            <button onClick={sentOtp} style={{border:"none",outline:"none",cursor:"pointer",marginRight:"5px"}}>{!otpSent?"send otp":"otp sent"}</button></span>
+            {otpSent && <input style={{border:"1px solid black",outline:"none",marginRight:"5px",padding:"10px"}} type="text" placeholder="enter otp" onChange={storeOtp} />
+            }
+            <button onClick={order} disabled={payNow} style={{padding:"10px 20px",color:"white",backgroundColor:"grey",border:"none"}}>Pay Rs- 42950</button>
+            {/* <ToastContainer /> */}
+            <br/>
+            <span style={{marginLeft:"38px",marginTop:"60px"}}>Phonepe is coming soon</span><br/>
+            </>}
+            <input onClick={cod} name="radio" style={{marginLeft:"5px",marginTop:"28px"}} type="radio" /><span style={{marginLeft:"20px",color:"black"}}>Cash On Delivery</span>
+            {
+                cash && <button onClick={orderbycash} style={{padding:"5px 10px",marginLeft:"50px",color:"white",backgroundColor:"grey",border:"none"}}>Order</button>
+            }
+            <ToastContainer />
+        </ul>
+
+        </div>
+        </div>
+        </>}
 
 
         </div>
-        
+
+        <div style={{display:"flex",justifyContent:"space-around",backgroundColor:"white",
+        alignItems:"center",height:"70px",paddingTop:"20px",paddingBottom:"20px",
+        marginTop:"20px"}}>
+            <div>
+            Policies: <span>Returns Policy |</span> <span>Terms of use |</span> <span>Security | </span><span>Privacy |</span> <span>Infringement </span> © 2007-2021 Flipkart.com
+            </div>
+            <div>
+            Need help? Visit the <Link>Help Center</Link> or <Link>Contact Us</Link>
+            </div>
+        </div>
         </div>
     );
 };

@@ -1,13 +1,13 @@
 export const Featurecontent = ({info})=>{
     const a = {
-        fontSize:"16px",
+        fontSize:"14px",
         color:"#878787",
         fontWeight:"400",
         paddingBottom:"1%",
         // padding: "3% 5%"
     }
     const b = {
-        fontSize:"16px",
+        fontSize:"14px",
         color:"#212121",
         fontWeight:"400",
         // marginLeft:"7%",
