@@ -1,6 +1,6 @@
 import styles  from '../../CSS/AddToCart.module.css' 
 import Modal from 'react-modal'; 
-function DetailsCart({count,toggleModal, isOpen, checkout}){
+function DetailsCart(){
     return (
         <div> 
            <div   className={styles.box} style={{ backgroundColor: "#f1f3f6"}}>
