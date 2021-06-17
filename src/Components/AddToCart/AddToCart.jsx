@@ -1,18 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState,useContext } from 'react';
 import { useHistory } from 'react-router';
 import styles  from '../../CSS/AddToCart.module.css' 
 import {Navbar} from "../Landing_Page/Navbar";
+import { Pricecontext } from '../../context/Pricecontext';
 
 import Modal from 'react-modal'; 
 import { Prod } from './Prod';
 function AddToCart(){
     const [isOpen, setIsOpen] = useState(false);
     const [savelater, setSavelater]= useState(false)
-    const [count, setCount]= useState(1)
-    const [price, setPrice]= useState(0)
-    const [discount, setDiscount]= useState(0)
-    const [total, setTotal] = useState(0)
     const [remove, setRemove] = useState(true)
+    const {count,price,discount,total,setCount,setPrice,setDiscount,setTotal } = useContext(Pricecontext) 
     const check = useHistory();
 console.log(remove)
     const checkout = ()=>{
@@ -27,8 +25,10 @@ console.log(remove)
       }
        useEffect(()=> {
            setPrice(43990*count)
+
            var dis= count * 19800
            setDiscount( dis)
+
            setTotal(price-discount)
        },[count,price,discount])
         
@@ -56,9 +56,14 @@ console.log(remove)
                    <div> 
                <img style={{height:"100px"}} alt="" src="https://rukminim1.flixcart.com/image/224/224/keaaavk0/computer/x/m/y/lenovo-na-laptop-original-imafuzt8r5jqppfn.jpeg?q=90"/>
                    <div className={styles.incbtn}>
-                   <button style={{width:"30px",height:"30px"}} disabled={count==1} onClick={()=>handleInc(-1)}>-</button>
-                        <div style={{marginTop:"2px",width:"50px",height:"25px",border:"1px solid black",textAlign:"center"}}>{count}</div>
-                        <button style={{width:"30px",height:"30px"}}  onClick={()=>handleInc(1)}>+</button>
+ 
+          
+
+                        <button disabled={count==1} onClick={()=>handleInc(-1)} style={{outline:"none"}}>-</button>
+                        <div style={{border:"1px solid grey",padding:"5px",paddingLeft:"15px", width:"50px" }}>{count}</div>
+                        <button onClick={()=>handleInc(1)} style={{outline:"none"}}>+</button> 
+
+ 
                    </div>
                </div>
                   <div>
