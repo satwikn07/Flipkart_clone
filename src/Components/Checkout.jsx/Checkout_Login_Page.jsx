@@ -88,12 +88,12 @@ const Checkout_Login_Page = () => {
         }
         else{
             
-            return ( toast.success("Congratulations ! Order placed successfully,", {
+              toast.success("Congratulations ! Order placed successfully,", {
                 position: toast.POSITION.TOP_CENTER
-              }))
+              })
+            setTimeout(()=>{history.push('/')},5000)
         }
-        
-           
+    
         // alert("Order placed successfully");
     }
 
