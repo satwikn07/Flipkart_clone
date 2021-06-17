@@ -4,9 +4,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import styles from "./Checkout_login.module.css";
 import {Navbar} from "../Landing_Page/Navbar";
 import {Link} from "react-router-dom";
+import { useHistory } from 'react-router';
 
 const Checkout_Login_Page = () => {
-
+    const history = useHistory();
     document.title=`flipkart.com:secure payment>login>select shipping address`;
     const [userName,setUserName] = useState("");
     const [password,setPassword] = useState("");
@@ -85,9 +86,14 @@ const Checkout_Login_Page = () => {
         if(otp.length!==4){
             return alert("enter otp is wrong");
         }
-        return  toast.success("Congratulations ! Order placed successfully,", {
-            position: toast.POSITION.TOP_CENTER
-          });
+        else{
+            
+            return ( toast.success("Congratulations ! Order placed successfully,", {
+                position: toast.POSITION.TOP_CENTER
+              }))
+        }
+        
+           
         // alert("Order placed successfully");
     }
 
