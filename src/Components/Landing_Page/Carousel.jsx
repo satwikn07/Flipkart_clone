@@ -7,8 +7,6 @@ function CarouselBox() {
  
 
         return (
-            // <Carousel showThumbs={false}  infiniteLoop={true}  useKeyboardArrows={true} autoPlay={true} >
-                 
                  
             <div     className="mySlides">
             <div style={{marginTop:"10px",marginLeft:"10px"}}> 

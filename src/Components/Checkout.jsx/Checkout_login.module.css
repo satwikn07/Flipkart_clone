@@ -6,14 +6,11 @@
 .outerDiv {
   margin-left: 5%;
   width: 76%;
-  /* border: 1px solid red; */
   background-color: #fff;
 }
 
 .login {
-  /* border: 1px sol#2874f0; */
   padding: 15px 20px;
-  /* height: 50px; */
   text-align: left;
   color: white;
   font-weight: 800;
@@ -37,8 +34,6 @@
 }
 
 .formDiv {
-  /* border: 1px solid #2874f0; */
-  /* padding: 15px 25px; */
   margin-left: 30px;
   margin-right: 10px;
 }
